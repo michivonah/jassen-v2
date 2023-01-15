@@ -81,6 +81,19 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
+    width: auto;
+    height: 240px;
+}
+
+@media screen and (max-width:640px){
+    #teppichContainer{
+        width: 90vw;
+        height: 90vw;
+    }
+
+    .card:is(.given){
+        height: 30vh;
+    }
 }
 
 .card:is(.given):nth-child(1){
