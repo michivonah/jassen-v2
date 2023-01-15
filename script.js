@@ -25,6 +25,7 @@ function startGame(){
     //window.scroll(0, window.innerHeight);
     shuffleCards();
     distributeCards(player0);
+    generateTrump();
 }
 
 function shuffleCards(){
@@ -250,6 +251,10 @@ function distributeCards(cards){
 }
 
 function generateTrump(){
-    var random = Math.floor(Math.random() * 3);
-    trump = random;
+    trump = Math.floor(Math.random() * 3);
+    var trumpIcon = document.getElementById("currentTrump");
+    if(trump == 0) trumpIcon.src = "assets/cards/eichel.svg";
+    else if(trump == 0) trumpIcon.src = "assets/cards/rose.svg";
+    else if(trump == 0) trumpIcon.src = "assets/cards/schelle.svg";
+    else trumpIcon.src = "assets/cards/schilte.svg";
 }
