@@ -24,7 +24,10 @@ let scores = [
 function startGame(){
     //window.scroll(0, window.innerHeight);
     shuffleCards();
-    distributeCards(player0);
+    distributeCards(player0, 0);
+    //distributeCards(player1, 1);
+    //distributeCards(player2, 2);
+    //distributeCards(player3, 3);
     generateTrump();
 }
 
@@ -240,14 +243,14 @@ function shuffleCards(){
     }
 }
 
-function distributeCards(cards){
-    var userShelf = document.getElementsByClassName('user')[0];
+function distributeCards(cards, playerNumber){
+    var userShelf = document.getElementsByClassName('cardContainer')[playerNumber];
     for(var i = 0; i < cards.length; i++){
         var newCard = document.createElement('img');
     newCard.src = cards[i].imageUrl;
     newCard.classList = "card";
     newCard.addEventListener('click', () => {
-        giveCard();
+        giveCard(event.target, 0);
     });
     userShelf.appendChild(newCard);
     }
@@ -262,7 +265,12 @@ function generateTrump(){
     else trumpIcon.src = "assets/cards/schilte.svg";
 }
 
-function giveCard(){
+function giveCard(card, playerNumber){
     var jassteppich = document.getElementById('teppichContainer');
-    jassteppich.append(event.target);
+    card.classList.add("given");
+    if(playerNumber == 0) card.classList.add("playerBottom");
+    else if(playerNumber == 1) card.classList.add("playerLeft");
+    else if(playerNumber == 2) card.classList.add("playerTop");
+    else card.classList.add("playerRight");
+    jassteppich.append(card);
 }

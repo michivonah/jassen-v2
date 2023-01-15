@@ -97,19 +97,19 @@ body{
     }
 }
 
-.card:is(.given):nth-child(1){
+.card:is(.playerBottom){
     transform: translate(-50%, -40%) rotate(0deg);
 }
 
-.card:is(.given):nth-child(2){
+.card:is(.playerLeft){
     transform: translate(-60%, -50%) rotate(90deg);
 }
 
-.card:is(.given):nth-child(3){
+.card:is(.playerTop){
     transform: translate(-50%, -60%) rotate(180deg);
 }
 
-.card:is(.given):nth-child(4){
+.card:is(.playerRight){
     transform: translate(-40%, -50%) rotate(270deg);
 }
 
