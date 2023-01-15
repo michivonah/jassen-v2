@@ -246,6 +246,9 @@ function distributeCards(cards){
         var newCard = document.createElement('img');
     newCard.src = cards[i].imageUrl;
     newCard.classList = "card";
+    newCard.addEventListener('click', () => {
+        giveCard();
+    });
     userShelf.appendChild(newCard);
     }
 }
@@ -257,4 +260,9 @@ function generateTrump(){
     else if(trump == 0) trumpIcon.src = "assets/cards/rose.svg";
     else if(trump == 0) trumpIcon.src = "assets/cards/schelle.svg";
     else trumpIcon.src = "assets/cards/schilte.svg";
+}
+
+function giveCard(){
+    var jassteppich = document.getElementById('teppichContainer');
+    jassteppich.append(event.target);
 }
