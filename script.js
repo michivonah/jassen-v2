@@ -5,6 +5,21 @@ let player0 = [];
 let player1 = [];
 let player2 = [];
 let player3 = [];
+let trump;
+let scores = [
+    {
+        "score": "0"
+    },
+    {
+        "score": "0"
+    },
+    {
+        "score": "0"
+    },
+    {
+        "score": "0"
+    }
+];
 
 function startGame(){
     //window.scroll(0, window.innerHeight);
@@ -232,4 +247,9 @@ function distributeCards(cards){
     newCard.classList = "card";
     userShelf.appendChild(newCard);
     }
+}
+
+function generateTrump(){
+    var random = Math.floor(Math.random() * 3);
+    trump = random;
 }
