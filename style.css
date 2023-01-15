@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 html{
     scroll-behavior: smooth;
 }
@@ -8,8 +10,18 @@ body{
     color: var(--color);
     background: var(--background);
     text-align: left;
+    font-family: var(--font);
+    font-size: 1rem;
     --color: #181818;
     --background: #f8f8f8;
+    --white: #f8f8f8;
+    --black: #181818;
+    --theme1: #badc58;
+    --theme2: #6ab04c;
+    --theme3: #27ae60;
+    --accent: #c0392b;
+    --font: 'Sofia Sans', sans-serif;
+    --transition: 0.2s ease all;
 }
 
 #content{
@@ -20,4 +32,72 @@ body{
     width: 100%;
     max-width: 1100px;
     margin: auto;
+    padding: 15px;
+}
+
+/* NAVBAR */
+#navbar{
+    display: none;
+}
+
+/* HOME */
+#home{
+    width: 100%;
+    height: 100vh;
+    margin: -25px 0 20px 0;
+    background-color: var(--white);
+    background-image: linear-gradient(90deg, rgba(186, 220, 88, 0.5) 50%, transparent 50%), linear-gradient(rgba(106, 176, 76, 0.5) 50%, transparent 50%);
+    background-size: 50px 50px;
+}
+
+/* GAME */
+#jassteppich{
+    background: var(--theme2);
+    border: 4px solid var(--theme3);
+    border-radius: 12px;
+}
+
+/* GENERAL */
+.notice{
+    font-size: 1.2rem;
+    position: relative;
+    padding: 0 15px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.notice::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 1.4rem;
+    background: var(--black);
+}
+
+a{
+    text-decoration: none;
+    font-style: normal;
+    color: inherit;
+}
+
+a:is(:hover, :focus){
+    text-decoration: none;
+    font-style: normal;
+}
+
+button{
+    width: auto;
+    height: auto;
+    padding: 10px 30px;
+    background: var(--accent);
+    border: 2px solid var(--white);
+    border-radius: 14px;
+    color: var(--white);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+button:is(:hover, :focus){
+    background: var(--theme1);
 }
