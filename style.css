@@ -48,14 +48,96 @@ body{
     background-color: var(--white);
     background-image: linear-gradient(90deg, rgba(186, 220, 88, 0.5) 50%, transparent 50%), linear-gradient(rgba(106, 176, 76, 0.5) 50%, transparent 50%);
     background-size: 50px 50px;
+    display: none;
 }
 
 /* GAME */
+#game{
+    width: 100%;
+    height: 100vh;
+}
+
+/* JASSTEPPICH */
 #jassteppich{
+    width: 400px;
+    height: 400px;
     background: var(--theme2);
     border: 4px solid var(--theme3);
     border-radius: 12px;
+    position: relative;
+    display: grid;
+    place-items: center;
 }
+
+.card:is(.given){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.card:is(.given):nth-child(1){
+    transform: translate(-50%, -40%) rotate(0deg);
+}
+
+.card:is(.given):nth-child(2){
+    transform: translate(-60%, -50%) rotate(90deg);
+}
+
+.card:is(.given):nth-child(3){
+    transform: translate(-50%, -60%) rotate(180deg);
+}
+
+.card:is(.given):nth-child(4){
+    transform: translate(-40%, -50%) rotate(270deg);
+}
+
+/* PLAYER CARDS */
+.cardContainer{
+    position: absolute;
+}
+
+/* USERS CARDS */
+.user{
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 200px;
+    display: flex;
+}
+
+.user .card{
+    height: 240px;
+    width: auto;
+    transition: 0.4 ease-out;
+    position: relative;
+    left: 0;
+}
+
+@media screen and (max-width:640px){
+    .user{
+        height: calc(20vh - 40px);
+    }
+
+    .user .card{
+        height: 20vh;
+    }
+}
+
+.user .card:not(:first-child){
+    margin-left: -50px;
+}
+
+.user .card:hover{
+    transform: translateY(-20px);
+    transition: 0.4s ease-out;
+}
+
+.user .card:hover ~ .card{
+    position: relative;
+    left: 50px;
+    transition: 0.4s ease-out;
+}
+
 
 /* GENERAL */
 .notice{
