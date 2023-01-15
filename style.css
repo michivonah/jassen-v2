@@ -96,6 +96,10 @@ body{
     position: absolute;
 }
 
+.cardContainer .cpu{
+    display: none;
+}
+
 /* USERS CARDS */
 .user{
     bottom: 0;
