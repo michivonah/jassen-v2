@@ -25,9 +25,9 @@ function startGame(){
     //window.scroll(0, window.innerHeight);
     shuffleCards();
     distributeCards(player0, 0);
-    //distributeCards(player1, 1);
-    //distributeCards(player2, 2);
-    //distributeCards(player3, 3);
+    distributeCards(player1, 1);
+    distributeCards(player2, 2);
+    distributeCards(player3, 3);
     generateTrump();
 }
 
