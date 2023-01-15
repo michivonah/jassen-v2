@@ -29,6 +29,12 @@ function startGame(){
     distributeCards(player2, 2);
     distributeCards(player3, 3);
     generateTrump();
+    /*while(document.getElementsByClassName('cardContainer')[1].childNodes.length > 0){
+        setTimeout(function(){
+            cpuPlayer(1);
+        }, 1500);
+    }*/
+    //console.log("Game finished");
 }
 
 function shuffleCards(){
@@ -273,4 +279,22 @@ function giveCard(card, playerNumber){
     else if(playerNumber == 2) card.classList.add("playerTop");
     else card.classList.add("playerRight");
     jassteppich.append(card);
+}
+
+function cpuPlayer(playerNumber){
+    switch(playerNumber){
+        case 1:
+            document.getElementsByClassName('cardContainer')[1].childNodes[Math.floor(Math.random() * (player1.length + 1))]
+            giveCard(card, 1);
+            break;
+        case 2:
+            document.getElementsByClassName('cardContainer')[2].childNodes[Math.floor(Math.random() * (player2.length + 1))]
+            giveCard(card, 2);
+            break;
+        case 3:
+        default:
+            document.getElementsByClassName('cardContainer')[3].childNodes[Math.floor(Math.random() * (player3.length + 1))]
+            giveCard(card, 3);
+            break;
+    }
 }
