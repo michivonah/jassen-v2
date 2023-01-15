@@ -20,6 +20,7 @@ body{
     --theme2: #6ab04c;
     --theme3: #27ae60;
     --accent: #c0392b;
+    --brown: #a83b11;
     --font: 'Sofia Sans', sans-serif;
     --transition: 0.2s ease all;
 }
@@ -161,6 +162,28 @@ body{
     position: relative;
     left: 50px;
     transition: 0.4s ease-out;
+}
+
+/* Jasstafel */
+#jasstafel{
+    width: 15%;
+    height: auto;
+    background: radial-gradient(circle, rgba(75,75,75,1) 0%, rgba(24,24,24,1) 100%);
+    color: var(--white);
+    border: 6px solid var(--brown);
+    border-radius: 4px;
+    padding: 15px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#jasstafel img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--white);
+    padding: 5px;
 }
 
 
