@@ -31,14 +31,6 @@ function startGame(){
     distributeCards(player3, 3);
     generateTrump();
     nextPlayer();
-    /*
-    giveCard(document.getElementsByClassName('cardContainer')[1].childNodes[Math.floor(Math.random() * (document.getElementsByClassName('cardContainer')[1].childNodes.length))], 1);
-    console.log(document.getElementsByClassName('cardContainer')[1].childNodes.length);*/
-    /*while(document.getElementsByClassName('cardContainer')[1].childNodes.length > 1){
-        giveCard(document.getElementsByClassName('cardContainer')[1].childNodes[Math.floor(Math.random() * (document.getElementsByClassName('cardContainer')[1].childNodes.length))], 1);
-        console.log(document.getElementsByClassName('cardContainer')[1].childNodes.length);
-    }*/
-    //console.log("Game finished");
 }
 
 function shuffleCards(){
@@ -292,22 +284,12 @@ function nextPlayer(){
     if(currentTurn == null) currentTurn = Math.floor(Math.random() * 3);
     currentTurn--;
     if(currentTurn < 0) currentTurn = 3;
+    if(currentTurn > 0 && currentTurn < 4) cpuPlayer(currentTurn);
 }
 
 function cpuPlayer(playerNumber){
-    switch(playerNumber){
-        case 1:
-            var card = document.getElementsByClassName('cardContainer')[1].childNodes[Math.floor(Math.random() * (player1.length + 1))]
-            giveCard(card, 1);
-            break;
-        case 2:
-            var card = document.getElementsByClassName('cardContainer')[2].childNodes[Math.floor(Math.random() * (player2.length + 1))]
-            giveCard(card, 2);
-            break;
-        case 3:
-        default:
-            var card = document.getElementsByClassName('cardContainer')[3].childNodes[Math.floor(Math.random() * (player3.length + 1))]
-            giveCard(card, 3);
-            break;
-    }
+    setTimeout(function(){
+        // code here the algorithm for choosing which card has to be given
+        giveCard(document.getElementsByClassName('cardContainer')[playerNumber].childNodes[Math.floor(Math.random() * (document.getElementsByClassName('cardContainer')[playerNumber].childNodes.length))], playerNumber);
+    }, 1000);
 }
