@@ -321,7 +321,7 @@ function giveCard(card, playerNumber){
 
 function nextPlayer(){
     var cardCount = document.getElementById('teppichContainer').childNodes.length;
-    if(cardCount > 4){
+    if(cardCount > 3){
         countPoints();
     }
     else{
