@@ -401,7 +401,7 @@ function endGame(){
     var endscreen = document.getElementById('gameSummary');
     var endIcon = document.getElementById('summaryIcon');
     var endTxt = document.getElementById('summaryTxt');
-    if(scores[0] > scores[1]){
+    if(parseInt(scores[0].score) > parseInt(scores[1].score)){
         endIcon.classList = "ai-victory-hand";
         endTxt.textContent = "Du hast gewonnen!";
     }
