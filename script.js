@@ -1,12 +1,13 @@
 // script.js
 // Michi von Ah
 
-let player0 = [];
-let player1 = [];
-let player2 = [];
-let player3 = [];
-let trump;
-let scores = [
+let player0 = []; // Cards of the user
+let player1 = []; // Cards of CPU Player 1
+let player2 = []; // Cards of CPU Player 2
+let player3 = []; // Cards of CPU Player 3
+let trump; // The current trump
+let currentTurn; // Which player is in turn
+let scores = [ // The scoreboard
     {
         "score": "0"
     },
@@ -281,19 +282,36 @@ function giveCard(card, playerNumber){
     jassteppich.append(card);
 }
 
+function nextPlayer(){
+    switch(currentTurn){
+        case 0:
+            break;
+        case 1:
+            break;
+        case 2:
+            break;
+        case 3:
+            break;
+        default:
+            // If no player is in turn then choose a random player
+            currentTurn = Math.floor(Math.random() * 3);
+            break;
+    }
+}
+
 function cpuPlayer(playerNumber){
     switch(playerNumber){
         case 1:
-            document.getElementsByClassName('cardContainer')[1].childNodes[Math.floor(Math.random() * (player1.length + 1))]
+            var card = document.getElementsByClassName('cardContainer')[1].childNodes[Math.floor(Math.random() * (player1.length + 1))]
             giveCard(card, 1);
             break;
         case 2:
-            document.getElementsByClassName('cardContainer')[2].childNodes[Math.floor(Math.random() * (player2.length + 1))]
+            var card = document.getElementsByClassName('cardContainer')[2].childNodes[Math.floor(Math.random() * (player2.length + 1))]
             giveCard(card, 2);
             break;
         case 3:
         default:
-            document.getElementsByClassName('cardContainer')[3].childNodes[Math.floor(Math.random() * (player3.length + 1))]
+            var card = document.getElementsByClassName('cardContainer')[3].childNodes[Math.floor(Math.random() * (player3.length + 1))]
             giveCard(card, 3);
             break;
     }
