@@ -32,217 +32,217 @@ function startGame(){
 function shuffleCards(){
     const allCards = [
         {
-            "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/eichel-ass.gif",
+            "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/eichel-ass.gif",
             "Type": "A",
             "Color": "Eichel",
             "Points": "11"
         },
         {
-            "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/eichel-koenig.gif",
+            "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/eichel-koenig.gif",
             "Type": "K",
             "Color": "Eichel",
             "Points": "4"
         },
         {
-            "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/eichel-ober.gif",
+            "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/eichel-ober.gif",
             "Type": "O",
             "Color": "Eichel",
             "Points": "3"
         },
         {
-            "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/eichel-under.gif",
+            "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/eichel-under.gif",
             "Type": "U",
             "Color": "Eichel",
             "Points": "20"
         },
         {
-            "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/eichel-banner.gif",
+            "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/eichel-banner.gif",
             "Type": "B",
             "Color": "Eichel",
             "Points": "10"
         },
         {
-            "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/eichel-neun.gif",
+            "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/eichel-neun.gif",
             "Type": "9",
             "Color": "Eichel",
             "Points": "0"
         },
         {
-            "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/eichel-acht.gif",
+            "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/eichel-acht.gif",
             "Type": "8",
             "Color": "Eichel",
             "Points": "0"
         },
         {
-            "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/eichel-sieben.gif",
+            "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/eichel-sieben.gif",
             "Type": "7",
             "Color": "Eichel",
             "Points": "0"
         },
         {
-            "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/eichel-sechs.gif",
+            "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/eichel-sechs.gif",
             "Type": "6",
             "Color": "Eichel",
             "Points": "0"
         },
         {
-            "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/rosen-ass.gif",
+            "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/rosen-ass.gif",
             "Type": "A",
             "Color": "Rose",
             "Points": "11"
         },
         {
-            "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/rosen-koenig.gif",
+            "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/rosen-koenig.gif",
             "Type": "K",
             "Color": "Rose",
             "Points": "4"
         },
         {
-            "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/rosen-ober.gif",
+            "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/rosen-ober.gif",
             "Type": "O",
             "Color": "Rose",
             "Points": "3"
         },
         {
-            "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/rosen-under.gif",
+            "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/rosen-under.gif",
             "Type": "U",
             "Color": "Rose",
             "Points": "20"
         },
         {
-            "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/rosen-banner.gif",
+            "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/rosen-banner.gif",
             "Type": "B",
             "Color": "Rose",
             "Points": "10"
         },
         {
-            "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/rosen-neun.gif",
+            "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/rosen-neun.gif",
             "Type": "9",
             "Color": "Rose",
             "Points": "0"
         },
         {
-            "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/rosen-acht.gif",
+            "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/rosen-acht.gif",
             "Type": "8",
             "Color": "Rose",
             "Points": "0"
         },
         {
-            "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/rosen-sieben.gif",
+            "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/rosen-sieben.gif",
             "Type": "7",
             "Color": "Rose",
             "Points": "0"
         },
         {
-            "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/rosen-sechs.gif",
+            "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/rosen-sechs.gif",
             "Type": "6",
             "Color": "Rose",
             "Points": "0"
         },
         {
-            "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/schellen-ass.gif",
+            "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/schellen-ass.gif",
             "Type": "A",
             "Color": "Schelle",
             "Points": "11"
         },
         {
-            "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/schellen-koenig.gif",
+            "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/schellen-koenig.gif",
             "Type": "K",
             "Color": "Schelle",
             "Points": "4"
         },
         {
-            "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/schellen-ober.gif",
+            "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/schellen-ober.gif",
             "Type": "O",
             "Color": "Schelle",
             "Points": "3"
         },
         {
-            "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/schellen-under.gif",
+            "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/schellen-under.gif",
             "Type": "U",
             "Color": "Schelle",
             "Points": "20"
         },
         {
-            "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/schellen-banner.gif",
+            "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/schellen-banner.gif",
             "Type": "B",
             "Color": "Schelle",
             "Points": "10"
         },
         {
-            "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/schellen-neun.gif",
+            "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/schellen-neun.gif",
             "Type": "9",
             "Color": "Schelle",
             "Points": "0"
         },
         {
-            "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/schellen-acht.gif",
+            "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/schellen-acht.gif",
             "Type": "8",
             "Color": "Schelle",
             "Points": "0"
         },
         {
-            "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/schellen-sieben.gif",
+            "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/schellen-sieben.gif",
             "Type": "7",
             "Color": "Schelle",
             "Points": "0"
         },
         {
-            "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/schellen-sechs.gif",
+            "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/schellen-sechs.gif",
             "Type": "6",
             "Color": "Schelle",
             "Points": "0"
         },
         {
-            "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/schilten-ass.gif",
+            "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/schilten-ass.gif",
             "Type": "A",
             "Color": "Schilte",
             "Points": "11"
         },
         {
-            "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/schilten-koenig.gif",
+            "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/schilten-koenig.gif",
             "Type": "K",
             "Color": "Schilte",
             "Points": "4"
         },
         {
-            "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/schilten-ober.gif",
+            "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/schilten-ober.gif",
             "Type": "O",
             "Color": "Schilte",
             "Points": "3"
         },
         {
-            "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/schilten-under.gif",
+            "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/schilten-under.gif",
             "Type": "U",
             "Color": "Schilte",
             "Points": "20"
         },
         {
-            "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/schilten-banner.gif",
+            "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/schilten-banner.gif",
             "Type": "B",
             "Color": "Schilte",
             "Points": "10"
         },
         {
-            "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/schilten-neun.gif",
+            "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/schilten-neun.gif",
             "Type": "9",
             "Color": "Schilte",
             "Points": "0"
         },
         {
-            "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/schilten-acht.gif",
+            "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/schilten-acht.gif",
             "Type": "8",
             "Color": "Schilte",
             "Points": "0"
         },
         {
-            "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/schilten-sieben.gif",
+            "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/schilten-sieben.gif",
             "Type": "7",
             "Color": "Schilte",
             "Points": "0"
         },
         {
-            "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/schilten-sechs.gif",
+            "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/schilten-sechs.gif",
             "Type": "6",
             "Color": "Schilte",
             "Points": "0"
