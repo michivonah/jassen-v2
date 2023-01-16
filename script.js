@@ -286,6 +286,7 @@ function distributeCards(cards, playerNumber){
     newCard.dataset.points = cards[i].Points;
     newCard.dataset.type = cards[i].Type;
     newCard.dataset.color = cards[i].Color;
+    newCard.dataset.playedFrom = playerNumber;
     newCard.addEventListener('click', () => {
         giveCard(event.target, 0);
     });
@@ -346,11 +347,30 @@ function countPoints(){
     var yourPoints = document.getElementById('yourPoints');
     var opponentPoints = document.getElementById('opponentPoints');
     // calculate the points
+    var highestValue = 0;
+    var winnerTeam;
     for(var card = 1; card < cards.length; card++){
-        sum += parseInt(cards[card].dataset.points);
+        var cardPoints = parseInt(cards[card].dataset.points);
+        if(cardPoints > highestValue){
+            highestValue = cardPoints;
+            winnerTeam = parseInt(cards[card].dataset.playedFrom);
+        }
+        sum += cardPoints;
     }
-    scores[0].score = sum;
-    yourPoints.textContent = "Du: " + sum;
+    switch(winnerTeam){
+        case 0:
+            scores[0].score = parseInt(scores[0].score) + sum;
+            yourPoints.textContent = "Du: " + scores[0].score;
+            break;
+        case 1:
+            scores[1].score = parseInt(scores[1].score) + sum;
+            opponentPoints.textContent = "Gegner:  " + scores[1].score;
+            break;
+        default:
+            console.log('Error, no team won.')
+            break;
+    }
+    
     setTimeout(function(){
         jassteppich.innerHTML = "";
         nextPlayer();
