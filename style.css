@@ -78,6 +78,10 @@ body{
     place-items: center;
 }
 
+.card{
+    user-select: none;
+}
+
 .card:is(.given){
     position: absolute;
     top: 50%;

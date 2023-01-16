@@ -30,10 +30,13 @@ function startGame(){
     distributeCards(player2, 2);
     distributeCards(player3, 3);
     generateTrump();
-    /*while(document.getElementsByClassName('cardContainer')[1].childNodes.length > 0){
-        setTimeout(function(){
-            cpuPlayer(1);
-        }, 1500);
+    nextPlayer();
+    /*
+    giveCard(document.getElementsByClassName('cardContainer')[1].childNodes[Math.floor(Math.random() * (document.getElementsByClassName('cardContainer')[1].childNodes.length))], 1);
+    console.log(document.getElementsByClassName('cardContainer')[1].childNodes.length);*/
+    /*while(document.getElementsByClassName('cardContainer')[1].childNodes.length > 1){
+        giveCard(document.getElementsByClassName('cardContainer')[1].childNodes[Math.floor(Math.random() * (document.getElementsByClassName('cardContainer')[1].childNodes.length))], 1);
+        console.log(document.getElementsByClassName('cardContainer')[1].childNodes.length);
     }*/
     //console.log("Game finished");
 }
@@ -273,30 +276,22 @@ function generateTrump(){
 }
 
 function giveCard(card, playerNumber){
-    var jassteppich = document.getElementById('teppichContainer');
-    card.classList.add("given");
-    if(playerNumber == 0) card.classList.add("playerBottom");
-    else if(playerNumber == 1) card.classList.add("playerLeft");
-    else if(playerNumber == 2) card.classList.add("playerTop");
-    else card.classList.add("playerRight");
-    jassteppich.append(card);
+    if(playerNumber == currentTurn){ // You can only give a card if its your turn
+        var jassteppich = document.getElementById('teppichContainer');
+        card.classList.add("given");
+        if(playerNumber == 0) card.classList.add("playerBottom");
+        else if(playerNumber == 1) card.classList.add("playerLeft");
+        else if(playerNumber == 2) card.classList.add("playerTop");
+        else card.classList.add("playerRight");
+        jassteppich.append(card);
+        nextPlayer();
+    }
 }
 
 function nextPlayer(){
-    switch(currentTurn){
-        case 0:
-            break;
-        case 1:
-            break;
-        case 2:
-            break;
-        case 3:
-            break;
-        default:
-            // If no player is in turn then choose a random player
-            currentTurn = Math.floor(Math.random() * 3);
-            break;
-    }
+    if(currentTurn == null) currentTurn = Math.floor(Math.random() * 3);
+    currentTurn--;
+    if(currentTurn < 0) currentTurn = 3;
 }
 
 function cpuPlayer(playerNumber){
