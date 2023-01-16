@@ -278,6 +278,9 @@ function giveCard(card, playerNumber){
         jassteppich.append(card);
         nextPlayer();
     }
+    else if(playerNumber == 0){
+        showHint("Du bist nicht an der Reihe!");
+    }
 }
 
 function nextPlayer(){
@@ -292,4 +295,16 @@ function cpuPlayer(playerNumber){
         // code here the algorithm for choosing which card has to be given
         giveCard(document.getElementsByClassName('cardContainer')[playerNumber].childNodes[Math.floor(Math.random() * (document.getElementsByClassName('cardContainer')[playerNumber].childNodes.length))], playerNumber);
     }, 1000);
+}
+
+function calcPoints(){
+    //
+}
+
+function showHint(content){
+    var hint = document.getElementById('hint');
+    var hintTxt = document.getElementById('hintTxt');
+    hint.style.display = "flex";
+    hint.style.opacity = "100%";
+    hintTxt.textContent = content;
 }
