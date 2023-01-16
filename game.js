@@ -1,4 +1,4 @@
-// script.js
+// game.js
 // Michi von Ah
 
 let player0 = []; // Cards of the user
