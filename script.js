@@ -7,6 +7,7 @@ let player2 = []; // Cards of CPU Player 2
 let player3 = []; // Cards of CPU Player 3
 let trump; // The current trump
 let currentTurn; // Which player is in turn
+let givenCards = 0;
 let scores = [ // The scoreboard
     {
         "score": "0"
@@ -31,6 +32,7 @@ function startGame(){
     distributeCards(player3, 3);
     generateTrump();
     nextPlayer();
+    showHint("Spiel beginnt!", "ai-face-very-happy");
 }
 
 function shuffleCards(){
@@ -269,6 +271,7 @@ function generateTrump(){
 
 function giveCard(card, playerNumber){
     if(playerNumber == currentTurn){ // You can only give a card if its your turn
+        givenCards++;
         var jassteppich = document.getElementById('teppichContainer');
         card.classList.add("given");
         if(playerNumber == 0) card.classList.add("playerBottom");
@@ -279,7 +282,7 @@ function giveCard(card, playerNumber){
         nextPlayer();
     }
     else if(playerNumber == 0){
-        showHint("Du bist nicht an der Reihe!");
+        showHint("Du bist nicht an der Reihe!", "ai-triangle-alert-fill");
     }
 }
 
@@ -301,10 +304,16 @@ function calcPoints(){
     //
 }
 
-function showHint(content){
+function showHint(content, icon){
     var hint = document.getElementById('hint');
     var hintTxt = document.getElementById('hintTxt');
+    var hintIcon = document.getElementById('hintIcon');
     hint.style.display = "flex";
     hint.style.opacity = "100%";
     hintTxt.textContent = content;
+    hintIcon.classList = icon;
+    setTimeout(function(){
+        hint.style.opacity = "0%";
+        hint.style.display = "none";
+    }, 1500);
 }
