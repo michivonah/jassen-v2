@@ -103,6 +103,14 @@
         startGame();
       });
 
+      window.addEventListener('blur', () =>{
+        document.title = "Spiel fortsetzen | Jassen by Michi";
+      });
+
+      window.addEventListener('focus', () =>{
+        document.title = "Jassen by Michi";
+      });
+
       </script>
 </body>
 </html>
