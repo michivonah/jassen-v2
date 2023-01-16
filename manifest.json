@@ -1,0 +1,32 @@
+{
+    "name": "Jassen by Michi",
+    "short_name": "Jassen",
+    "description": "Ein simples Jassspiel.",
+    "lang": "de-CH",
+    "orientation": "any",
+    "theme_color": "#79c857",
+    "background_color": "#79c857",
+    "start_url": "https://jass.von-ah.me",
+    "display": "standalone",
+    "icons": [
+      {
+        "src": "https://jass.von-ah.me/assets/logo/logo_128.png",
+        "sizes": "96x96"
+      },
+      {
+        "src": "https://jass.von-ah.me/assets/logo/logo_256.png",
+        "sizes": "144x144",
+        "type": "image/png"
+      },
+      {
+        "src": "https://jass.von-ah.me/assets/logo/logo_256.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "https://jass.von-ah.me/assets/logo/logo_256.png",
+        "sizes": "256x256",
+        "type": "image/png"
+      }
+    ]
+  }
