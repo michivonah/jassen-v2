@@ -18,7 +18,8 @@ let scores = [ // The scoreboard
 ];
 
 function startGame(){
-    //window.scroll(0, window.innerHeight);
+    window.scroll(0, window.innerHeight);
+    document.getElementById('home').style.display = "none";
     shuffleCards();
     distributeCards(player0, 0);
     distributeCards(player1, 1);
