@@ -7,7 +7,7 @@ let player2 = []; // Cards of CPU Player 2
 let player3 = []; // Cards of CPU Player 3
 let trump; // The current trump
 let currentTurn; // Which player is in turn
-let givenCards = 0;
+let givenCards = 0; // total given cards in this game
 let scores = [ // The scoreboard
     {
         "score": "0"
@@ -375,6 +375,8 @@ function countPoints(){
         jassteppich.innerHTML = "";
         nextPlayer();
     }, 1000);
+
+    if(givenCards > 35) endGame();
 }
 
 function showHint(content, icon){
@@ -389,4 +391,30 @@ function showHint(content, icon){
         hint.style.opacity = "0%";
         hint.style.display = "none";
     }, 1500);
+}
+
+function endGame(){
+    var endscreen = document.getElementById('gameSummary');
+    var endIcon = document.getElementById('summaryIcon');
+    var endTxt = document.getElementById('summaryTxt');
+    if(scores[0] > scores[1]){
+        endIcon.classList = "ai-victory-hand";
+        endTxt.textContent = "Du hast gewonnen!";
+    }
+    else{
+        endIcon.classList = "ai-face-sad";
+        endTxt.textContent = "Du hast verloren!";
+    }
+    endscreen.style.display = "flex";
+}
+
+function newGame(){
+    var endscreen = document.getElementById('gameSummary');
+    endscreen.style.display = "none";
+    player0 = [];
+    player1 = [];
+    player2 = [];
+    player3 = [];
+    givenCards = 0;
+    startGame();
 }

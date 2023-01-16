@@ -256,6 +256,29 @@ body{
     margin: 0 30px;
 }
 
+/* GAME SUMMARY */
+#gameSummary{
+    width: 100%;
+    height: auto;
+    background: var(--accent);
+    color: var(--white);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    font-size: 1.2rem;
+    display: none; /* FLEX */
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+
+#gameSummary i{
+    font-size: 4rem;
+}
+
 
 /* GENERAL */
 .notice{
@@ -299,5 +322,5 @@ button{
 }
 
 button:is(:hover, :focus){
-    background: var(--theme1);
+    background: var(--brown);
 }
