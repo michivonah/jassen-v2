@@ -14,12 +14,6 @@ let scores = [ // The scoreboard
     },
     {
         "score": "0"
-    },
-    {
-        "score": "0"
-    },
-    {
-        "score": "0"
     }
 ];
 
@@ -40,182 +34,218 @@ function shuffleCards(){
         {
             "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/eichel-ass.gif",
             "Type": "A",
-            "Color": "Eichel"
+            "Color": "Eichel",
+            "Points": "11"
         },
         {
             "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/eichel-koenig.gif",
             "Type": "K",
-            "Color": "Eichel"
+            "Color": "Eichel",
+            "Points": "4"
         },
         {
             "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/eichel-ober.gif",
             "Type": "O",
-            "Color": "Eichel"
+            "Color": "Eichel",
+            "Points": "3"
         },
         {
             "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/eichel-under.gif",
             "Type": "U",
-            "Color": "Eichel"
+            "Color": "Eichel",
+            "Points": "20"
         },
         {
             "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/eichel-banner.gif",
             "Type": "B",
-            "Color": "Eichel"
+            "Color": "Eichel",
+            "Points": "10"
         },
         {
             "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/eichel-neun.gif",
             "Type": "9",
-            "Color": "Eichel"
+            "Color": "Eichel",
+            "Points": "0"
         },
         {
             "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/eichel-acht.gif",
             "Type": "8",
-            "Color": "Eichel"
+            "Color": "Eichel",
+            "Points": "0"
         },
         {
             "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/eichel-sieben.gif",
             "Type": "7",
-            "Color": "Eichel"
+            "Color": "Eichel",
+            "Points": "0"
         },
         {
             "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/eichel-sechs.gif",
             "Type": "6",
-            "Color": "Eichel"
+            "Color": "Eichel",
+            "Points": "0"
         },
         {
             "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/rosen-ass.gif",
             "Type": "A",
-            "Color": "Rose"
+            "Color": "Rose",
+            "Points": "11"
         },
         {
             "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/rosen-koenig.gif",
             "Type": "K",
-            "Color": "Rose"
+            "Color": "Rose",
+            "Points": "4"
         },
         {
             "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/rosen-ober.gif",
             "Type": "O",
-            "Color": "Rose"
+            "Color": "Rose",
+            "Points": "3"
         },
         {
             "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/rosen-under.gif",
             "Type": "U",
-            "Color": "Rose"
+            "Color": "Rose",
+            "Points": "20"
         },
         {
             "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/rosen-banner.gif",
             "Type": "B",
-            "Color": "Rose"
+            "Color": "Rose",
+            "Points": "10"
         },
         {
             "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/rosen-neun.gif",
             "Type": "9",
-            "Color": "Rose"
+            "Color": "Rose",
+            "Points": "0"
         },
         {
             "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/rosen-acht.gif",
             "Type": "8",
-            "Color": "Rose"
+            "Color": "Rose",
+            "Points": "0"
         },
         {
             "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/rosen-sieben.gif",
             "Type": "7",
-            "Color": "Rose"
+            "Color": "Rose",
+            "Points": "0"
         },
         {
             "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/rosen-sechs.gif",
             "Type": "6",
-            "Color": "Rose"
+            "Color": "Rose",
+            "Points": "0"
         },
         {
             "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/schellen-ass.gif",
             "Type": "A",
-            "Color": "Schelle"
+            "Color": "Schelle",
+            "Points": "11"
         },
         {
             "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/schellen-koenig.gif",
             "Type": "K",
-            "Color": "Schelle"
+            "Color": "Schelle",
+            "Points": "4"
         },
         {
             "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/schellen-ober.gif",
             "Type": "O",
-            "Color": "Schelle"
+            "Color": "Schelle",
+            "Points": "3"
         },
         {
             "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/schellen-under.gif",
             "Type": "U",
-            "Color": "Schelle"
+            "Color": "Schelle",
+            "Points": "20"
         },
         {
             "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/schellen-banner.gif",
             "Type": "B",
-            "Color": "Schelle"
+            "Color": "Schelle",
+            "Points": "10"
         },
         {
             "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/schellen-neun.gif",
             "Type": "9",
-            "Color": "Schelle"
+            "Color": "Schelle",
+            "Points": "0"
         },
         {
             "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/schellen-acht.gif",
             "Type": "8",
-            "Color": "Schelle"
+            "Color": "Schelle",
+            "Points": "0"
         },
         {
             "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/schellen-sieben.gif",
             "Type": "7",
-            "Color": "Schelle"
+            "Color": "Schelle",
+            "Points": "0"
         },
         {
             "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/schellen-sechs.gif",
             "Type": "6",
-            "Color": "Schelle"
+            "Color": "Schelle",
+            "Points": "0"
         },
         {
             "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/schilten-ass.gif",
             "Type": "A",
-            "Color": "Schilte"
+            "Color": "Schilte",
+            "Points": "11"
         },
         {
             "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/schilten-koenig.gif",
             "Type": "K",
-            "Color": "Schilte"
+            "Color": "Schilte",
+            "Points": "4"
         },
         {
             "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/schilten-ober.gif",
             "Type": "O",
-            "Color": "Schilte"
+            "Color": "Schilte",
+            "Points": "3"
         },
         {
             "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/schilten-under.gif",
             "Type": "U",
-            "Color": "Schilte"
+            "Color": "Schilte",
+            "Points": "20"
         },
         {
             "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/schilten-banner.gif",
             "Type": "B",
-            "Color": "Schilte"
+            "Color": "Schilte",
+            "Points": "10"
         },
         {
             "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/schilten-neun.gif",
             "Type": "9",
-            "Color": "Schilte"
+            "Color": "Schilte",
+            "Points": "0"
         },
         {
             "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/schilten-acht.gif",
             "Type": "8",
-            "Color": "Schilte"
+            "Color": "Schilte",
+            "Points": "0"
         },
         {
             "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/schilten-sieben.gif",
             "Type": "7",
-            "Color": "Schilte"
+            "Color": "Schilte",
+            "Points": "0"
         },
         {
             "imageUrl": "https://jassverzeichnis.ch/wp-content/uploads/2022/05/schilten-sechs.gif",
             "Type": "6",
-            "Color": "Schilte"
+            "Color": "Schilte",
+            "Points": "0"
         },
     ];
     
@@ -253,6 +283,9 @@ function distributeCards(cards, playerNumber){
         var newCard = document.createElement('img');
     newCard.src = cards[i].imageUrl;
     newCard.classList = "card";
+    newCard.dataset.points = cards[i].Points;
+    newCard.dataset.type = cards[i].Type;
+    newCard.dataset.color = cards[i].Color;
     newCard.addEventListener('click', () => {
         giveCard(event.target, 0);
     });
@@ -287,10 +320,16 @@ function giveCard(card, playerNumber){
 }
 
 function nextPlayer(){
-    if(currentTurn == null) currentTurn = Math.floor(Math.random() * 3);
-    currentTurn--;
-    if(currentTurn < 0) currentTurn = 3;
-    if(currentTurn > 0 && currentTurn < 4) cpuPlayer(currentTurn);
+    var cardCount = document.getElementById('teppichContainer').childNodes.length;
+    if(cardCount > 4){
+        countPoints();
+    }
+    else{
+        if(currentTurn == null) currentTurn = Math.floor(Math.random() * 3);
+        currentTurn--;
+        if(currentTurn < 0) currentTurn = 3;
+        if(currentTurn > 0 && currentTurn < 4) cpuPlayer(currentTurn);
+    }
 }
 
 function cpuPlayer(playerNumber){
@@ -300,8 +339,22 @@ function cpuPlayer(playerNumber){
     }, 1000);
 }
 
-function calcPoints(){
-    //
+function countPoints(){
+    var jassteppich = document.getElementById('teppichContainer');
+    var cards = jassteppich.childNodes;
+    var sum = 0;
+    var yourPoints = document.getElementById('yourPoints');
+    var opponentPoints = document.getElementById('opponentPoints');
+    // calculate the points
+    for(var card = 1; card < cards.length; card++){
+        sum += parseInt(cards[card].dataset.points);
+    }
+    scores[0].score = sum;
+    yourPoints.textContent = "Du: " + sum;
+    setTimeout(function(){
+        jassteppich.innerHTML = "";
+        nextPlayer();
+    }, 1000);
 }
 
 function showHint(content, icon){
