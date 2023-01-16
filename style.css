@@ -16,7 +16,7 @@ body{
     --background: #f8f8f8;
     --white: #f8f8f8;
     --black: #181818;
-    --theme1: #badc58;
+    --theme1: #79c857;
     --theme2: #6ab04c;
     --theme3: #27ae60;
     --accent: #c0392b;
@@ -71,6 +71,14 @@ body{
     width: 400px;
     height: 400px;
     background: var(--theme2);
+    /*background: radial-gradient(circle, var(--theme1) 0%, var(--theme2) 100%);*/
+    background:
+    radial-gradient(var(--theme1) 15%, transparent 16%) 0 0,
+    radial-gradient(var(--theme1) 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(121, 200, 87, 0.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(121, 200, 87, 0.1) 15%, transparent 20%) 8px 9px;
+    background-color: var(--theme2);
+    background-size:16px 16px;
     border: 4px solid var(--theme3);
     border-radius: 12px;
     position: relative;
