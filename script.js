@@ -255,24 +255,28 @@ function shuffleCards(){
         var random = Math.floor(Math.random() * 36);
         if(!usedCards.includes(random)){
             player0.push(allCards[random]);
+            usedCards.push(random);
         }
     }
     while(player1.length < 9){
         var random = Math.floor(Math.random() * 36);
         if(!usedCards.includes(random)){
             player1.push(allCards[random]);
+            usedCards.push(random);
         }
     }
     while(player2.length < 9){
         var random = Math.floor(Math.random() * 36);
         if(!usedCards.includes(random)){
             player2.push(allCards[random]);
+            usedCards.push(random);
         }
     }
     while(player3.length < 9){
         var random = Math.floor(Math.random() * 36);
         if(!usedCards.includes(random)){
             player3.push(allCards[random]);
+            usedCards.push(random);
         }
     }
 }
