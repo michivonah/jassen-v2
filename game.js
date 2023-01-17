@@ -337,7 +337,7 @@ function distributeCards(cards, playerNumber){
 }
 
 function generateTrump(){
-    var random = Math.floor(Math.random() * 3);
+    var random = Math.floor(Math.random() * 4);
     var trumps = [
         {
             "trumpColor": "Eichel"
@@ -393,7 +393,17 @@ function nextPlayer(){
 function cpuPlayer(playerNumber){
     setTimeout(function(){
         // code here the algorithm for choosing which card has to be given
-        giveCard(document.getElementsByClassName('cardContainer')[playerNumber].childNodes[Math.floor(Math.random() * (document.getElementsByClassName('cardContainer')[playerNumber].childNodes.length))], playerNumber);
+        var deck = document.getElementsByClassName('cardContainer')[playerNumber].childNodes;
+        /*var countTrumpCards = 0;
+        for(var cTc = 0; cTc < deck.lenght; cTc++){
+            if(deck[cTc].dataset.color == trump){
+                countTrumpCards++;
+            }
+        }
+        if(countTrumpCards > 1){
+            //
+        }*/
+        giveCard(deck[Math.floor(Math.random() * (deck.length))], playerNumber);
     }, 1000);
 }
 
