@@ -455,7 +455,8 @@ function countPoints(){
             opponentPoints.textContent = "Gegner:  " + scores[1].score;
             break;
         default:
-            console.log('Error, no team won.')
+            winnerTeam = Math.floor(Math.random() * 3);
+            console.log('Error, no team won. Next turn: Player ' + winnerTeam)
             break;
     }
     
