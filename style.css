@@ -97,6 +97,11 @@ body{
     height: 240px;
 }
 
+.card:is(.best){
+    border: 4px solid var(--brown);
+    border-radius: 12px;
+}
+
 @media screen and (max-width:640px){
     #teppichContainer{
         width: 90vw;

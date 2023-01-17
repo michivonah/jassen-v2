@@ -353,21 +353,27 @@ function countPoints(){
     var opponentPoints = document.getElementById('opponentPoints');
     // calculate the points
     var highestValue = 0;
+    var highestCard = cards[0];
     var winnerTeam;
     for(var card = 1; card < cards.length; card++){
-        var cardPoints = parseInt(cards[card].dataset.points);
+        var playedCard = cards[card];
+        var cardPoints = parseInt(playedCard.dataset.points);
         if(cardPoints > highestValue){
             highestValue = cardPoints;
-            winnerTeam = parseInt(cards[card].dataset.playedFrom);
+            winnerTeam = parseInt(playedCard.dataset.playedFrom);
+            highestCard = playedCard;
         }
         sum += cardPoints;
     }
+    if(highestCard != null) highestCard.classList.add('best');
     switch(winnerTeam){
         case 0:
+        case 2:
             scores[0].score = parseInt(scores[0].score) + sum;
             yourPoints.textContent = "Du: " + scores[0].score;
             break;
         case 1:
+        case 3:
             scores[1].score = parseInt(scores[1].score) + sum;
             opponentPoints.textContent = "Gegner:  " + scores[1].score;
             break;
@@ -378,6 +384,8 @@ function countPoints(){
     
     setTimeout(function(){
         jassteppich.innerHTML = "";
+        currentTurn = winnerTeam + 1;
+        if(currentTurn > 3) currentTurn = 0;
         nextPlayer();
     }, 1000);
 
