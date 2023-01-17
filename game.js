@@ -392,18 +392,28 @@ function nextPlayer(){
 
 function cpuPlayer(playerNumber){
     setTimeout(function(){
-        // code here the algorithm for choosing which card has to be given
         var deck = document.getElementsByClassName('cardContainer')[playerNumber].childNodes;
-        /*var countTrumpCards = 0;
-        for(var cTc = 0; cTc < deck.lenght; cTc++){
-            if(deck[cTc].dataset.color == trump){
+        var countTrumpCards = 0;
+        var currentColor = 0;
+        var cardToGive;
+        for(var count = 0; count < deck.lenght; count++){
+            if(deck[count].dataset.color == document.getElementsByClassName('given')[0]){
+                // counts all cards which have the same color like the first given card
+                currentColor++;
+                cardToGive = deck[count];
+            }
+            else if(deck[count].dataset.color == trump){
+                // counts all cards which are trump
                 countTrumpCards++;
+                cardToGive = deck[count];
             }
         }
-        if(countTrumpCards > 1){
-            //
-        }*/
-        giveCard(deck[Math.floor(Math.random() * (deck.length))], playerNumber);
+        if(cardToGive){
+            giveCard(cardToGive, playerNumber);
+        }
+        else{
+            giveCard(deck[Math.floor(Math.random() * (deck.length))], playerNumber);
+        }
     }, 1000);
 }
 
@@ -421,7 +431,6 @@ function countPoints(){
         var playedCard = cards[card];
         if(trump == playedCard.dataset.color){
             var cardPoints = parseInt(playedCard.dataset.pointsTrump);
-            console.log("Trump given");
         }
         else{
             var cardPoints = parseInt(playedCard.dataset.points);
