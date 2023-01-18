@@ -412,7 +412,7 @@ function cpuPlayer(playerNumber){
         var currentColor = 0;
         var cardToGive;
         for(var count = 0; count < deck.lenght; count++){
-            if(deck[count].dataset.color == document.getElementsByClassName('given')[0]){
+            if(deck[count].dataset.color == document.getElementsByClassName('given')[0].dataset.color){
                 // counts all cards which have the same color like the first given card
                 currentColor++;
                 cardToGive = deck[count];
