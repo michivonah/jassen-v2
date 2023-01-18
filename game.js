@@ -448,11 +448,13 @@ function countPoints(){
         case 2:
             scores[0].score = parseInt(scores[0].score) + sum;
             yourPoints.textContent = "Du: " + scores[0].score;
+            if(givenCards > 35) scores[0].score = parseInt(scores[0].score) + 5;
             break;
         case 1:
         case 3:
             scores[1].score = parseInt(scores[1].score) + sum;
             opponentPoints.textContent = "Gegner:  " + scores[1].score;
+            if(givenCards > 35) scores[0].score = parseInt(scores[0].score) + 5;
             break;
         default:
             winnerTeam = Math.floor(Math.random() * 3);
