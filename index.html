@@ -83,6 +83,23 @@
                 <p id="yourPoints">Du: 0</p>
                 <p id="opponentPoints">Gegner: 0</p>
             </div>
+            <div id="trumpChooser">
+              <p>W&auml;hle den Trumpf!</p>
+              <div id="trumpContainer">
+                <button class="trumpButton" onclick="setTrump(0)">
+                  <img src="assets/cards/eichel.svg" alt="Eichel Trumpf">
+                </button>
+                <button class="trumpButton" onclick="setTrump(1)">
+                  <img src="assets/cards/rose.svg" alt="Rose Trumpf">
+                </button>
+                <button class="trumpButton" onclick="setTrump(2)">
+                  <img src="assets/cards/schelle.svg" alt="Schelle Trumpf">
+                </button>
+                <button class="trumpButton" onclick="setTrump(3)">
+                  <img src="assets/cards/schilte.svg" alt="Schilte Trumpf">
+                </button>
+              </div>
+            </div>
             <div class="cardContainer user"></div>
             <div class="cardContainer cpu"></div>
             <div class="cardContainer cpu"></div>

@@ -25,7 +25,6 @@ function startGame(){
     distributeCards(player1, 1);
     distributeCards(player2, 2);
     distributeCards(player3, 3);
-    generateTrump();
     nextPlayer();
     showHint("Spiel beginnt!", "ai-face-very-happy");
 }
@@ -336,8 +335,20 @@ function distributeCards(cards, playerNumber){
     }
 }
 
-function generateTrump(){
-    var random = Math.floor(Math.random() * 4);
+function generateTrump(cpuMode){
+    if(!cpuMode){
+        var trumpChooser = document.getElementById('trumpChooser');
+        trumpChooser.style.display = "block";
+    }
+    else{
+        var random = Math.floor(Math.random() * 4);
+        setTrump(random);
+    }
+}
+
+function setTrump(trumpNumber){
+    var trumpChooser = document.getElementById('trumpChooser');
+    trumpChooser.style.display = "none";
     var trumps = [
         {
             "trumpColor": "Eichel"
@@ -352,7 +363,7 @@ function generateTrump(){
             "trumpColor": "Schilte"
         }
     ];
-    trump = trumps[random].trumpColor;
+    trump = trumps[trumpNumber].trumpColor;
     var trumpIcon = document.getElementById("currentTrump");
     if(trump == "Eichel") trumpIcon.src = "assets/cards/eichel.svg";
     else if(trump == "Rose") trumpIcon.src = "assets/cards/rose.svg";
@@ -386,6 +397,10 @@ function nextPlayer(){
         if(currentTurn == null) currentTurn = Math.floor(Math.random() * 3);
         currentTurn--;
         if(currentTurn < 0) currentTurn = 3;
+        if(givenCards == 0){
+            if(currentTurn > 0 && currentTurn < 4) generateTrump(true);
+            else generateTrump(false);
+        }
         if(currentTurn > 0 && currentTurn < 4) cpuPlayer(currentTurn);
     }
 }

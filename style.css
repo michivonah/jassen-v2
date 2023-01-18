@@ -21,6 +21,7 @@ body{
     --theme3: #27ae60;
     --accent: #c0392b;
     --brown: #a83b11;
+    --jasstafelBackground: radial-gradient(circle, rgba(75,75,75,1) 0%, rgba(24,24,24,1) 100%);
     --font: 'Sofia Sans', sans-serif;
     --transition: 0.2s ease all;
 }
@@ -224,7 +225,7 @@ body{
 #jasstafel{
     width: 15%;
     height: auto;
-    background: radial-gradient(circle, rgba(75,75,75,1) 0%, rgba(24,24,24,1) 100%);
+    background: var(--jasstafelBackground);
     color: var(--white);
     border: 6px solid var(--brown);
     border-radius: 4px;
@@ -240,6 +241,50 @@ body{
     border-radius: 50%;
     background: var(--white);
     padding: 5px;
+}
+
+/* TRUMP CHOOSER */
+#trumpChooser{
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--jasstafelBackground);
+    border: 6px solid var(--brown);
+    border-radius: 4px;
+    color: var(--white);
+    font-size: 1.2rem;
+    padding: 15px;
+    z-index: 980;
+    display: none;
+}
+
+#trumpContainer{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.trumpButton{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: var(--white);
+    padding: 5px;
+    margin: 10px;
+}
+
+.trumpButton img{
+    width: auto;
+    height: 100%;
+}
+
+.trumpButton:is(:hover, :focus){
+    background: var(--brown);
 }
 
 /* HINT */
