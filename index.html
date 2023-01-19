@@ -64,12 +64,17 @@
             <div class="inner-width">
                 <h1>Jassen by Michi</h1>
                 <p class="notice">Diese Spiel ist noch in Entwicklung.</p>
-                <h2>Copyright</h2>
-                <p>Die Karten sind von jassverzeichnis.ch. Im sp&auml;teren Verlauf der Entwicklung werden diese durch eigene Karten ersetzt.</p>
-                <p>Auch Danke an projects.verou.me/css3patterns f&uuml;r die tollen CSS Hintergr&uuml;nde</p>
-                <p>Die Icons der Farben sind von Wikipedia.</p>
-                <p>https://codepen.io/william-goldsworthy/pen/JzVajj</p>
                 <button onclick="startGame()">Jetzt spielen!</button>
+                <button onclick="toggleSection('copyright', 'block')">Copyright</button>
+                <button onlick="window.open('https://michivonah.ch/#footer')">Impressum</button>
+                <p>Kontakt: <a href="mailto:info@michivonah.ch" alt="Kontakt per Mail" title="Kontakt per Mail">info@michivonah.ch</a></p>
+                <div id="copyright">
+                  <h2>Copyright</h2>
+                  <p>Die Karten sind von jassverzeichnis.ch. Im sp&auml;teren Verlauf der Entwicklung werden diese durch eigene Karten ersetzt.</p>
+                  <p>Der Hintergrund beim Jassteppich wurde mithilfe von projects.verou.me/css3patterns erstellt</p>
+                  <p>Die Icons der verschiedenen Jassfarben sind von Wikipedia und wurden von Jensche gezeichnet.</p>
+                  <p>Die Animation beim &uuml;berfahren der Karten ist von https://codepen.io/william-goldsworthy/pen/JzVajj</p>
+                </div>
             </div>
         </div>
 
@@ -122,10 +127,9 @@
       <script>
       // Loading
       window.addEventListener('load', () => {
-        startGame();
         setTimeout(function(){
           document.getElementById('loadingScreen').style.display = "none";
-        }, 2000);
+        }, 1500);
       });
 
       window.addEventListener('blur', () =>{
@@ -135,6 +139,16 @@
       window.addEventListener('focus', () =>{
         document.title = "Jassen by Michi";
       });
+
+      function toggleSection(sectionName, type){
+        var section = document.getElementById(sectionName);
+        if(section.style.display == "block" || section.style.display == "flex"){
+          section.style.display = "none";
+        }
+        else{
+          section.style.display = type;
+        }
+      }
 
       </script>
 </body>
