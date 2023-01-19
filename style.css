@@ -37,6 +37,47 @@ body{
     padding: 15px;
 }
 
+/* LOADING SCREEN */
+#loadingScreen{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    background: var(--theme1);
+    display: grid;
+    place-items: center;
+    user-select: none;
+    overflow: hidden;
+}
+
+.loader{
+    width: clamp(200px, 40%, 300px);
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, -50%);
+    animation: shuffleLoader 2s infinite;
+}
+
+.loader:nth-child(2){
+    animation-delay: 350ms;
+}
+
+@keyframes shuffleLoader{
+    0%{
+        transform: translate(-60%, -50%) rotate(-10deg);
+    }
+    50%{
+        transform: translate(-45%, -50%) rotate(10deg);
+    }
+    100%{
+        transform: translate(-60%, -50%) rotate(-10deg);
+    }
+}
+
 /* NAVBAR */
 #navbar{
     display: none;
@@ -57,6 +98,7 @@ body{
     width: 100%;
     height: 100vh;
     position: relative;
+    overflow-y: hidden;
 }
 
 /* JASSTEPPICH */

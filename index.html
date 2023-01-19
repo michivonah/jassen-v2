@@ -49,8 +49,8 @@
 <body>
 
       <div id="loadingScreen">
-        <div id="loader">
-        </div>
+        <img class="loader" src="assets/logo/loadingCard.svg" alt="Jasskarte Ladebildschirm">
+        <img class="loader" src="assets/logo/loadingCard.svg" alt="Jasskarte Ladebildschirm">
       </div>
 
       <nav id="navbar">
@@ -122,8 +122,10 @@
       <script>
       // Loading
       window.addEventListener('load', () => {
-        document.getElementById('loadingScreen').style.display = "none";
         startGame();
+        setTimeout(function(){
+          document.getElementById('loadingScreen').style.display = "none";
+        }, 2000);
       });
 
       window.addEventListener('blur', () =>{
