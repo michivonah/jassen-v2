@@ -318,9 +318,33 @@ function shuffleCards(){
 }
 
 function distributeCards(cards, playerNumber){
+    // sort cards
+    cards.sort((a, b) => {
+        const nameA = a.Type.toUpperCase();
+        const nameB = b.Type.toUpperCase();
+        if (nameA < nameB) {
+          return 1;
+        }
+        if (nameA > nameB) {
+          return -1;
+        }
+        return 0;
+    });
+    cards.sort((a, b) => {
+        const nameA = a.Color.toUpperCase();
+        const nameB = b.Color.toUpperCase();
+        if (nameA < nameB) {
+          return -1;
+        }
+        if (nameA > nameB) {
+          return 1;
+        }
+        return 0;
+    });
+    // distribute
     var userShelf = document.getElementsByClassName('cardContainer')[playerNumber];
     for(var i = 0; i < cards.length; i++){
-        var newCard = document.createElement('img');
+    var newCard = document.createElement('img');
     newCard.src = cards[i].imageUrl;
     newCard.classList = "card";
     newCard.dataset.points = cards[i].Points;
