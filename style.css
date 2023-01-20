@@ -86,7 +86,8 @@ body{
 /* HOME */
 #home{
     width: 100%;
-    height: calc(100vh + 25px);
+    height: auto;
+    min-height: calc(100vh + 25px);
     margin: -25px 0 20px 0;
     background-image: url(assets/backgrounds/background01.jpg);
     background-repeat: no-repeat;
@@ -111,6 +112,7 @@ body{
     height: 100vh;
     position: relative;
     overflow-y: hidden;
+    display: none;
 }
 
 /* JASSTEPPICH */
