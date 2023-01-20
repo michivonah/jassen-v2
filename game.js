@@ -440,7 +440,7 @@ function countPoints(){
     var opponentPoints = document.getElementById('opponentPoints');
     // calculate the points
     var highestValue = 0;
-    var highestCard = cards[0];
+    var highestCard = cards[cards.length - 3];
     var winnerTeam;
     for(var card = 1; card < cards.length; card++){
         var playedCard = cards[card];
@@ -452,31 +452,34 @@ function countPoints(){
             var cardPoints = parseInt(playedCard.dataset.points);
         }
         if(cardPoints > highestValue){
-            if(highestCard.dataset.color == trump && cardPoints.dataset.color == trump){
+            if(highestCard.dataset.color == trump && playedCard.dataset.color == trump){
                 // Die Karte welche bisher die grösste war ist ein Trumpf. Ausserdem ist die gegegebene Karte auch ein Trumpf mit einem höheren Wert.
                 higher = true;
             }
-            else if(highestCard.dataset.color == trump && cardPoints.dataset.color != trump){
-                // Die Karte welche bisher die grösste war ist ein Trumpf. Die gegebenen ist kein Trumpf.
-                higher = false;
-            }
-            else if(highestCard.dataset.color != trump && cardPoints.dataset.color == trump){
+            else if(highestCard.dataset.color != trump && playedCard.dataset.color == trump){
                 // die karte welche bisher die grösste war ist kein trumpf, die gegebene jedoch schon.
                 higher = true;
             }
-            else if(highestCard.dataset.color != trump && cardPoints.dataset.color == cards[0].dataset.color){
+            else if(highestCard.dataset.color != trump && playedCard.dataset.color == cards[0].dataset.color){
                 // Die Karte welche bisher die grösste war ist kein Trumpf. Die Karte hat die gleiche Farbe wie die erste gegebene und hat einen höheren Wert als diese.
                 higher = true;
+            }
+            else if(highestCard.dataset.color == trump && playedCard.dataset.color != trump){
+                // Die Karte welche bisher die grösste war ist ein Trumpf. Die gegebenen ist kein Trumpf.
+                higher = false;
             }
             else{
                 // Jeder sonstige Fall wenn die gegeben Karte grösser ist als die bisherigen
                 higher = true;
             } 
 
-            if(higher){
+            if(higher == true){
                 highestValue = cardPoints;
                 winnerTeam = parseInt(playedCard.dataset.playedFrom);
                 highestCard = playedCard;
+            }
+            else{
+                winnerTeam = parseInt(highestCard.dataset.playedFrom);
             }
         }
         sum += cardPoints;
