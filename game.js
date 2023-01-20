@@ -434,7 +434,7 @@ function cpuPlayer(playerNumber){
 
 function countPoints(){
     var jassteppich = document.getElementById('teppichContainer');
-    var cards = document.getElementsByClassName('given');
+    var cards = jassteppich.childNodes;
     var sum = 0;
     var yourPoints = document.getElementById('yourPoints');
     var opponentPoints = document.getElementById('opponentPoints');
