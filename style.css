@@ -96,7 +96,7 @@ body{
     place-items: center;
 }
 
-#copyright{
+.hiddenSection{
     background: var(--accent);
     margin: 30px 0;
     padding: 15px;

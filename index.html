@@ -65,15 +65,33 @@
                 <h1>Jassen by Michi</h1>
                 <p class="notice">Diese Spiel ist noch in Entwicklung.</p>
                 <button onclick="startGame()">Jetzt spielen!</button>
+                <button onclick="toggleSection('changelog', 'block')">Changelog</button>
                 <button onclick="toggleSection('copyright', 'block')">Copyright</button>
                 <button onlick="window.open('https://michivonah.ch/#footer')">Impressum</button>
                 <p>Kontakt: <a href="mailto:info@michivonah.ch" alt="Kontakt per Mail" title="Kontakt per Mail">info@michivonah.ch</a></p>
-                <div id="copyright">
+                <div id="copyright" class="hiddenSection">
                   <h2>Copyright</h2>
                   <p>Die Karten sind von jassverzeichnis.ch. Im sp&auml;teren Verlauf der Entwicklung werden diese durch eigene Karten ersetzt.</p>
                   <p>Der Hintergrund beim Jassteppich wurde mithilfe von projects.verou.me/css3patterns erstellt</p>
                   <p>Die Icons der verschiedenen Jassfarben sind von Wikipedia und wurden von Jensche gezeichnet.</p>
                   <p>Die Animation beim &uuml;berfahren der Karten ist von https://codepen.io/william-goldsworthy/pen/JzVajj</p>
+                </div>
+                <div id="changelog" class="hiddenSection">
+                  <h2>Changelog</h2>
+                  <p>20. Januar 2023</p>
+                  <ul>
+                    <li>Punktez&auml;-Algorithmus verbessert</li>
+                    <li>Changelog hinzugefügt</li>
+                  </ul>
+                  <p>19. Januar 2023</p>
+                  <ul>
+                    <li>Homescreen angepasst</li>
+                    <li>Ladebildschirm hinzugef&uuml;gt</li>
+                  </ul>
+                  <p>18. Januar 2023</p>
+                  <ul>
+                    <li>Trumpf kann nun vom Benutzer gew&auml;lt werden</li>
+                  </ul>
                 </div>
             </div>
         </div>
