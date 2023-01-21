@@ -184,21 +184,25 @@ body{
 
 .card:is(.playerBottom){
     transform: translate(-50%, -40%) rotate(0deg);
+    -webkit-animation: slideInFromBottom 0.4s 1;
     animation: slideInFromBottom 0.4s 1;
 }
 
 .card:is(.playerLeft){
     transform: translate(-60%, -50%) rotate(90deg);
+    -webkit-animation: slideInFromLeft 0.4s 1;
     animation: slideInFromLeft 0.4s 1;
 }
 
 .card:is(.playerTop){
     transform: translate(-50%, -60%) rotate(180deg);
+    -webkit-animation: slideInFromTop 0.4s 1;
     animation: slideInFromTop 0.4s 1;
 }
 
 .card:is(.playerRight){
     transform: translate(-40%, -50%) rotate(270deg);
+    -webkit-animation: slideInFromRight 0.4s 1;
     animation: slideInFromRight 0.4s 1;
 }
 
@@ -211,12 +215,30 @@ body{
     }
 }
 
+@-webkit-keyframes slideInFromBottom{
+    0%{
+        -webkit-transform: translate(-50%, -30%) rotate(0deg);
+    }
+    100%{
+        -webkit-transform: translate(-50%, -40%) rotate(0deg);
+    }
+}
+
 @keyframes slideInFromLeft{
     0%{
         transform: translate(-70%, -50%) rotate(90deg);
     }
     100%{
         transform: translate(-60%, -50%) rotate(90deg);
+    }
+}
+
+@-webkit-keyframes slideInFromLeft{
+    0%{
+        -webkit-transform: translate(-70%, -50%) rotate(90deg);
+    }
+    100%{
+        -webkit-transform: translate(-60%, -50%) rotate(90deg);
     }
 }
 
@@ -229,12 +251,30 @@ body{
     }
 }
 
+@-webkit-keyframes slideInFromTop{
+    0%{
+        -webkit-transform: translate(-50%, -70%) rotate(180deg);
+    }
+    100%{
+        -webkit-transform: translate(-50%, -60%) rotate(180deg);
+    }
+}
+
 @keyframes slideInFromRight{
     0%{
         transform: translate(-30%, -50%) rotate(270deg);
     }
     100%{
         transform: translate(-40%, -50%) rotate(270deg);
+    }
+}
+
+@-webkit-keyframes slideInFromRight{
+    0%{
+        -webkit-transform: translate(-30%, -50%) rotate(270deg);
+    }
+    100%{
+        -webkit-transform: translate(-40%, -50%) rotate(270deg);
     }
 }
 
