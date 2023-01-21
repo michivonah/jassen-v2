@@ -85,6 +85,13 @@
                 </div>
                 <div id="changelog" class="hiddenSection">
                   <h2>Changelog</h2>
+                  <p>21. Januar 2023</p>
+                  <ul>
+                    <li>Animationen f&uuml;r iOS angepasst</li>
+                    <li>Problem melden Funktion hinzugef&uuml;gt</li>
+                    <li>Steuerungskn&ouml;pfe hinzugef&uuml;gt</li>
+                    <li>M&ouml;glichkeit das Spiel zur&uuml;ckzusetzen hinzugef&uuml;gt</li>
+                  </ul>
                   <p>20. Januar 2023</p>
                   <ul>
                     <li>Karten werden nun sortiert angezeigt</li>
@@ -162,6 +169,14 @@
                 <p>Spiel beendet</p>
                 <p id="summaryTxt"></p>
                 <button onclick="newGame()">Noch eine Runde!</button>
+            </div>
+            <div id="controlButtons">
+              <button onclick="toggleSection('alertProblem', 'block')"><i class="ai-triangle-alert-fill"></i></button>
+              <button onclick="resetGame()"><i class="ai-arrow-counter-clockwise"></i></button>
+            </div>
+            <div id="alertProblem">
+              <button onclick="toggleSection('alertProblem', 'block')">Fenster schliessen</button>
+              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe-Q_Jh-RQlw2gt2Rq2WKQ94mbMRUXAixDBVfcFU-6KJP1JeQ/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Wird geladen…</iframe>
             </div>
         </div>
       </div>

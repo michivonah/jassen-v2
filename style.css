@@ -444,6 +444,66 @@ body{
     font-size: 4rem;
 }
 
+/* CONTROL BUTTONS */
+#controlButtons{
+    display: flex;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+#controlButtons button{
+    width: 46px;
+    height: 46px;
+    border: none;
+    border-radius: 50%;
+    color: var(--white);
+    font-size: 1.2rem;
+    margin: 0 10px;
+    padding: 0;
+}
+
+@media screen and (max-width:640px){
+    #controlButtons{
+        flex-wrap: wrap;
+    }
+}
+
+/* ALERT GAME FORM */
+#alertProblem{
+    width: 60%;
+    height: 85vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--accent);
+    border: 2px solid var(--white);
+    border-radius: 12px;
+    padding: 15px;
+    z-index: 980;
+    text-align: center;
+    display: none;
+}
+
+#alertProblem iframe{
+    width: 100%;
+    height: calc(100% - (1rem + 40px));
+    border: none;
+    border-radius: 8px;
+}
+
+#alertProblem button{
+    width: 80%;
+}
+
+@media screen and (max-width:640px){
+    #alertProblem{
+        width: 90%;
+        height: 90vh;
+    }
+}
+
 
 /* GENERAL */
 .notice{

@@ -578,3 +578,14 @@ function newGame(){
     givenCards = 0;
     startGame();
 }
+
+function resetGame(){
+    var confirmed = confirm("Die aktuelle Runde wird beendet und es startet eine neue Runde. Bist du einverstanden?");
+    if(confirmed){
+        var decks = document.getElementsByClassName('cardContainer');
+        for(var i = 0; i < decks.length; i++){
+            decks[i].innerHTML = "";
+        }
+        newGame();
+    }
+}
