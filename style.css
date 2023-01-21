@@ -78,6 +78,18 @@ body{
     }
 }
 
+@-webkit-keyframes shuffleLoader{
+    0%{
+        -webkit-transform: translate(-60%, -50%) rotate(-10deg);
+    }
+    50%{
+        -webkit-transform: translate(-45%, -50%) rotate(10deg);
+    }
+    100%{
+        -webkit-transform: translate(-60%, -50%) rotate(-10deg);
+    }
+}
+
 /* NAVBAR */
 #navbar{
     display: none;
