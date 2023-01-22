@@ -471,7 +471,6 @@ function countPoints(){
     for(var card = 1; card < cards.length; card++){
         var playedCard = cards[card];
         var higher = false;
-        if(playedCard.classList.contains('best')) playedCard.classList.remove('best');
         if(trump == playedCard.dataset.color){
             var cardPoints = parseInt(playedCard.dataset.pointsTrump);
         }
@@ -504,7 +503,6 @@ function countPoints(){
                 highestValue = cardPoints;
                 winnerTeam = parseInt(playedCard.dataset.playedFrom);
                 highestCard = playedCard;
-                highestCard.classList.add('best');
             }
             else{
                 winnerTeam = parseInt(highestCard.dataset.playedFrom);
@@ -512,6 +510,7 @@ function countPoints(){
         }
         sum += cardPoints;
     }
+    highestCard.classList.add('best');
     switch(winnerTeam){
         case 0:
         case 2:
