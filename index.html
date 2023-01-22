@@ -75,6 +75,7 @@
                   <p>Der Hintergrund beim Jassteppich wurde mithilfe von projects.verou.me/css3patterns erstellt</p>
                   <p>Die Icons der verschiedenen Jassfarben sind von Wikipedia und wurden von Jensche gezeichnet.</p>
                   <p>Die Animation beim &uuml;berfahren der Karten ist von https://codepen.io/william-goldsworthy/pen/JzVajj</p>
+                  <p>Die Hintergrundmusik ist <a href="https://pixabay.com/de/users/comastudio-26079283/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=102685">ComaStudio</a> von <a href="https://pixabay.com/music//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=102685">Pixabay</a>.</p>
                 </div>
                 <div id="imprint" class="hiddenSection">
                   <h2>Impressum</h2>
@@ -91,6 +92,7 @@
                     <li>Reset-Funktion erweitert & Home-Button hinzugef&uuml;gt</li>
                     <li>Kartengr&ouml;sse auf Smartphones angepasst</li>
                     <li>Darstellungsfehler behoben</li>
+                    <li>Hintergrundmusik hinzugef&uuml;gt</li>
                   </ul>
                   <p>21. Januar 2023</p>
                   <ul>
@@ -181,10 +183,14 @@
               <button onclick="closeGame()"><i class="ai-home-alt1"></i></button>
               <button onclick="toggleSection('alertProblem', 'block')"><i class="ai-triangle-alert-fill"></i></button>
               <button onclick="resetGame()"><i class="ai-arrow-counter-clockwise"></i></button>
+              <button onclick="toggleMusic()"><i class="ai-music-album"></i></button>
             </div>
             <div id="alertProblem">
               <button onclick="toggleSection('alertProblem', 'block')">Fenster schliessen</button>
               <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe-Q_Jh-RQlw2gt2Rq2WKQ94mbMRUXAixDBVfcFU-6KJP1JeQ/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Wird geladen…</iframe>
+            </div>
+            <div id="musicPlayer">
+              <audio id="backgroundMusic" src="assets/music/backgroundmusic.mp3" loop muted></audio>
             </div>
         </div>
       </div>

@@ -604,3 +604,15 @@ function closeGame(){
     document.getElementById('game').style.display = "none";
     window.scroll(0, 0);
 }
+
+function toggleMusic(){
+    var player = document.getElementById('backgroundMusic');
+    player.play();
+    player.volume = 0.3;
+    if(player.muted == true){
+        player.muted = false;
+    }
+    else{
+        player.muted = true;
+    }
+}

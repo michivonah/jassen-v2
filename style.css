@@ -525,6 +525,11 @@ body{
     }
 }
 
+/* BACKGROUND MUSIC */
+#musicPlayer{
+    display: none;
+}
+
 
 /* GENERAL */
 .notice{
