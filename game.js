@@ -581,13 +581,27 @@ function newGame(){
     startGame();
 }
 
-function resetGame(){
-    var confirmed = confirm("Die aktuelle Runde wird beendet und es startet eine neue Runde. Bist du einverstanden?");
+function resetGame(confirmMessage){
+    if(confirmMessage != null){
+        var confirmed = confirm(confirmMessage);
+    }
+    else{
+        var confirmed = confirm("Die aktuelle Runde wird beendet und es startet eine neue Runde. Bist du einverstanden?");
+    }
     if(confirmed){
         var decks = document.getElementsByClassName('cardContainer');
         for(var i = 0; i < decks.length; i++){
             decks[i].innerHTML = "";
         }
+        var jassteppich = document.getElementById('teppichContainer');
+        jassteppich.innerHTML = "";
         newGame();
     }
+}
+
+function closeGame(){
+    resetGame("Die aktuelle Runde wird abgebrochen und du kehrst zum Startbildschirm zurück. Bist du sicher?");
+    document.getElementById('home').style.display = "grid";
+    document.getElementById('game').style.display = "none";
+    window.scroll(0, 0);
 }
