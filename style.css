@@ -304,16 +304,6 @@ body{
     left: 0;
 }
 
-@media screen and (max-width:640px){
-    .user{
-        height: calc(20vh - 40px);
-    }
-
-    .user .card{
-        height: 20vh;
-    }
-}
-
 .user .card:not(:first-child){
     margin-left: -50px;
 }
@@ -328,6 +318,35 @@ body{
     left: 50px;
     transition: 0.4s ease-out;
 }
+
+/* MOBILE VERSION OF CARD STACKING */
+@media screen and (max-width:640px){
+    .user{
+        height: auto;
+        max-height: calc(30vh - 40px);
+    }
+
+    .user .card{
+        height: auto;
+        width: 20vw;
+    }
+
+    .user .card:not(:first-child){
+        margin-left: -11vw;
+    }
+    
+    .user .card:hover{
+        transform: translateY(-20px);
+        transition: 0.4s ease-out;
+    }
+    
+    .user .card:hover ~ .card{
+        position: relative;
+        left: 8vw;
+        transition: 0.4s ease-out;
+    }
+}
+
 
 /* Jasstafel */
 #jasstafel{
