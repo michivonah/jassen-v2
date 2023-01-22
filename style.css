@@ -190,7 +190,7 @@ body{
 }
 
 .card:is(.playerLeft){
-    transform: translate(-60%, -50%) rotate(90deg);
+    transform: translate(-70%, -50%) rotate(90deg);
     -webkit-animation: slideInFromLeft 0.4s 1;
     animation: slideInFromLeft 0.4s 1;
 }
@@ -202,7 +202,7 @@ body{
 }
 
 .card:is(.playerRight){
-    transform: translate(-40%, -50%) rotate(270deg);
+    transform: translate(-30%, -50%) rotate(270deg);
     -webkit-animation: slideInFromRight 0.4s 1;
     animation: slideInFromRight 0.4s 1;
 }
@@ -227,19 +227,19 @@ body{
 
 @keyframes slideInFromLeft{
     0%{
-        transform: translate(-70%, -50%) rotate(90deg);
+        transform: translate(-80%, -50%) rotate(90deg);
     }
     100%{
-        transform: translate(-60%, -50%) rotate(90deg);
+        transform: translate(-70%, -50%) rotate(90deg);
     }
 }
 
 @-webkit-keyframes slideInFromLeft{
     0%{
-        -webkit-transform: translate(-70%, -50%) rotate(90deg);
+        -webkit-transform: translate(-80%, -50%) rotate(90deg);
     }
     100%{
-        -webkit-transform: translate(-60%, -50%) rotate(90deg);
+        -webkit-transform: translate(-70%, -50%) rotate(90deg);
     }
 }
 
@@ -263,19 +263,19 @@ body{
 
 @keyframes slideInFromRight{
     0%{
-        transform: translate(-30%, -50%) rotate(270deg);
+        transform: translate(-20%, -50%) rotate(270deg);
     }
     100%{
-        transform: translate(-40%, -50%) rotate(270deg);
+        transform: translate(-30%, -50%) rotate(270deg);
     }
 }
 
 @-webkit-keyframes slideInFromRight{
     0%{
-        -webkit-transform: translate(-30%, -50%) rotate(270deg);
+        -webkit-transform: translate(-20%, -50%) rotate(270deg);
     }
     100%{
-        -webkit-transform: translate(-40%, -50%) rotate(270deg);
+        -webkit-transform: translate(-30%, -50%) rotate(270deg);
     }
 }
 
