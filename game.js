@@ -456,6 +456,7 @@ function distributeCards(cards, playerNumber){
     var newCard = document.createElement('img');
     newCard.src = cards[i].imageUrl;
     newCard.classList = "card";
+    newCard.classList.add("player" + playerNumber);
     newCard.dataset.points = cards[i].Points;
     newCard.dataset.pointsTrump = cards[i].PointsTrump;
     newCard.dataset.type = cards[i].Type;
@@ -541,28 +542,28 @@ function nextPlayer(){
 
 function cpuPlayer(playerNumber){
     setTimeout(function(){
-        var deck = document.getElementsByClassName('cardContainer')[playerNumber].childNodes;
-        var countTrumpCards = 0;
-        var currentColor = 0;
-        var cardToGive;
-        for(var count = 0; count < deck.lenght; count++){
-            if(deck[count].dataset.color == document.getElementsByClassName('given')[0].dataset.color){
-                // counts all cards which have the same color like the first given card
-                currentColor++;
-                cardToGive = deck[count];
-            }
-            else if(!cardToGive && deck[count].dataset.color == trump){
-                // counts all cards which are trump
-                countTrumpCards++;
-                cardToGive = deck[count];
-            }
+        var deck = document.getElementsByClassName('player' + playerNumber);
+        var firstGivenCard = document.getElementsByClassName('given')[0];
+        if(firstGivenCard == null){
+            firstGivenCard = deck[5];
         }
+        var currentColor = firstGivenCard.dataset.color;
+        var cardToGive = deck[0];
+        // HIER DEN ALGORITHMUS DER GEGNER PROGRAMMIEREN
+        /*for(var i = 0; i < deck.length; i++){
+            if(deck(i).dataset.color == currentColor){
+                cardToGive = deck[i];
+                break;
+            }
+        }*/
+        giveCard(cardToGive, playerNumber);
+        /*
         if(cardToGive){
             giveCard(cardToGive, playerNumber);
         }
         else{
             giveCard(deck[Math.floor(Math.random() * (deck.length))], playerNumber);
-        }
+        }*/
     }, 1000);
 }
 
