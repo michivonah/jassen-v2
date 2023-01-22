@@ -190,7 +190,12 @@
               <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe-Q_Jh-RQlw2gt2Rq2WKQ94mbMRUXAixDBVfcFU-6KJP1JeQ/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Wird geladen…</iframe>
             </div>
             <div id="musicPlayer">
-              <audio id="backgroundMusic" src="assets/music/backgroundmusic.mp3" loop muted></audio>
+              <audio id="backgroundMusic" src="assets/music/backgroundmusic.mp3" loop muted>
+                <source src="assets/music/backgroundmusic.mp3" type="audio/mpeg">
+                <source src="assets/music/backgroundmusic.ogg" type="audio/ogg">
+                <source src="assets/music/backgroundmusic.aac" type="audio/aac">
+                <source src="assets/music/backgroundmusic.wav" type="audio/wav">
+              </audio>
             </div>
         </div>
       </div>
