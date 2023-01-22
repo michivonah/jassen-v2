@@ -85,6 +85,10 @@
                 </div>
                 <div id="changelog" class="hiddenSection">
                   <h2>Changelog</h2>
+                  <p>22. Januar 2023</p>
+                  <ul>
+                    <li>Generelle Verbesserungen am Spiel (Bugs gefixt)</li>
+                  </ul>
                   <p>21. Januar 2023</p>
                   <ul>
                     <li>Animationen f&uuml;r iOS angepasst</li>
@@ -192,7 +196,11 @@
       });
 
       window.addEventListener('blur', () =>{
-        document.title = "Spiel fortsetzen | Jassen by Michi";
+        if(document.getElementById('game').style.display == "block"){
+          setTimeout(function(){
+            document.title = "Spiel fortsetzen | Jassen by Michi";
+          }, 500);
+        }
       });
 
       window.addEventListener('focus', () =>{

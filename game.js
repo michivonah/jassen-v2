@@ -459,17 +459,19 @@ function cpuPlayer(playerNumber){
 
 function countPoints(){
     var jassteppich = document.getElementById('teppichContainer');
-    var cards = jassteppich.childNodes;
+    var cards = document.getElementsByClassName('given');
     var sum = 0;
     var yourPoints = document.getElementById('yourPoints');
     var opponentPoints = document.getElementById('opponentPoints');
     // calculate the points
     var highestValue = 0;
-    var highestCard = cards[cards.length - 3];
-    var winnerTeam;
+    var highestCard = cards[0];
+    var firstCard = cards[0];
+    var winnerTeam = 0;
     for(var card = 1; card < cards.length; card++){
         var playedCard = cards[card];
         var higher = false;
+        if(playedCard.classList.contains('best')) playedCard.classList.remove('best');
         if(trump == playedCard.dataset.color){
             var cardPoints = parseInt(playedCard.dataset.pointsTrump);
         }
@@ -485,7 +487,7 @@ function countPoints(){
                 // die karte welche bisher die grösste war ist kein trumpf, die gegebene jedoch schon.
                 higher = true;
             }
-            else if(highestCard.dataset.color != trump && playedCard.dataset.color == cards[0].dataset.color){
+            else if(highestCard.dataset.color != trump && playedCard.dataset.color == firstCard.dataset.color){
                 // Die Karte welche bisher die grösste war ist kein Trumpf. Die Karte hat die gleiche Farbe wie die erste gegebene und hat einen höheren Wert als diese.
                 higher = true;
             }
@@ -502,6 +504,7 @@ function countPoints(){
                 highestValue = cardPoints;
                 winnerTeam = parseInt(playedCard.dataset.playedFrom);
                 highestCard = playedCard;
+                highestCard.classList.add('best');
             }
             else{
                 winnerTeam = parseInt(highestCard.dataset.playedFrom);
@@ -509,7 +512,6 @@ function countPoints(){
         }
         sum += cardPoints;
     }
-    if(highestCard != null) highestCard.classList.add('best');
     switch(winnerTeam){
         case 0:
         case 2:
@@ -524,7 +526,7 @@ function countPoints(){
             if(givenCards > 35) scores[0].score = parseInt(scores[0].score) + 5;
             break;
         default:
-            winnerTeam = Math.floor(Math.random() * 3);
+            winnerTeam = 0;
             console.log('Error, no team won. Next turn: Player ' + winnerTeam)
             break;
     }
