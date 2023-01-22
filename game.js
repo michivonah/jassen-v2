@@ -37,252 +37,360 @@ function shuffleCards(){
             "Type": "A",
             "Color": "Eichel",
             "Points": "11",
-            "PointsTrump": "11"
+            "PointsTrump": "11",
+            "PointsObenabe": "0",
+            "PointsUndeufe": "0",
+            "SortingNr": "9"
         },
         {
             "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/eichel-koenig.gif",
             "Type": "K",
             "Color": "Eichel",
             "Points": "4",
-            "PointsTrump": "4"
+            "PointsTrump": "4",
+            "PointsObenabe": "0",
+            "PointsUndeufe": "0",
+            "SortingNr": "8"
         },
         {
             "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/eichel-ober.gif",
             "Type": "O",
             "Color": "Eichel",
             "Points": "3",
-            "PointsTrump": "3"
+            "PointsTrump": "3",
+            "PointsObenabe": "0",
+            "PointsUndeufe": "0",
+            "SortingNr": "7"
         },
         {
             "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/eichel-under.gif",
             "Type": "U",
             "Color": "Eichel",
             "Points": "2",
-            "PointsTrump": "20"
+            "PointsTrump": "20",
+            "PointsObenabe": "0",
+            "PointsUndeufe": "0",
+            "SortingNr": "6"
         },
         {
             "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/eichel-banner.gif",
             "Type": "B",
             "Color": "Eichel",
             "Points": "10",
-            "PointsTrump": "10"
+            "PointsTrump": "10",
+            "PointsObenabe": "0",
+            "PointsUndeufe": "0",
+            "SortingNr": "5"
         },
         {
             "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/eichel-neun.gif",
             "Type": "9",
             "Color": "Eichel",
             "Points": "0",
-            "PointsTrump": "14"
+            "PointsTrump": "14",
+            "PointsObenabe": "0",
+            "PointsUndeufe": "0",
+            "SortingNr": "4"
         },
         {
             "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/eichel-acht.gif",
             "Type": "8",
             "Color": "Eichel",
             "Points": "0",
-            "PointsTrump": "0"
+            "PointsTrump": "0",
+            "PointsObenabe": "0",
+            "PointsUndeufe": "0",
+            "SortingNr": "3"
         },
         {
             "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/eichel-sieben.gif",
             "Type": "7",
             "Color": "Eichel",
             "Points": "0",
-            "PointsTrump": "0"
+            "PointsTrump": "0",
+            "PointsObenabe": "0",
+            "PointsUndeufe": "0",
+            "SortingNr": "2"
         },
         {
             "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/eichel-sechs.gif",
             "Type": "6",
             "Color": "Eichel",
             "Points": "0",
-            "PointsTrump": "0"
+            "PointsTrump": "0",
+            "PointsObenabe": "0",
+            "PointsUndeufe": "0",
+            "SortingNr": "1"
         },
         {
             "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/rosen-ass.gif",
             "Type": "A",
             "Color": "Rose",
             "Points": "11",
-            "PointsTrump": "11"
+            "PointsTrump": "11",
+            "PointsObenabe": "0",
+            "PointsUndeufe": "0",
+            "SortingNr": "9"
         },
         {
             "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/rosen-koenig.gif",
             "Type": "K",
             "Color": "Rose",
             "Points": "4",
-            "PointsTrump": "4"
+            "PointsTrump": "4",
+            "PointsObenabe": "0",
+            "PointsUndeufe": "0",
+            "SortingNr": "8"
         },
         {
             "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/rosen-ober.gif",
             "Type": "O",
             "Color": "Rose",
             "Points": "3",
-            "PointsTrump": "3"
+            "PointsTrump": "3",
+            "PointsObenabe": "0",
+            "PointsUndeufe": "0",
+            "SortingNr": "7"
         },
         {
             "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/rosen-under.gif",
             "Type": "U",
             "Color": "Rose",
             "Points": "2",
-            "PointsTrump": "20"
+            "PointsTrump": "20",
+            "PointsObenabe": "0",
+            "PointsUndeufe": "0",
+            "SortingNr": "6"
         },
         {
             "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/rosen-banner.gif",
             "Type": "B",
             "Color": "Rose",
             "Points": "10",
-            "PointsTrump": "10"
+            "PointsTrump": "10",
+            "PointsObenabe": "0",
+            "PointsUndeufe": "0",
+            "SortingNr": "5"
         },
         {
             "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/rosen-neun.gif",
             "Type": "9",
             "Color": "Rose",
             "Points": "0",
-            "PointsTrump": "14"
+            "PointsTrump": "14",
+            "PointsObenabe": "0",
+            "PointsUndeufe": "0",
+            "SortingNr": "4"
         },
         {
             "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/rosen-acht.gif",
             "Type": "8",
             "Color": "Rose",
             "Points": "0",
-            "PointsTrump": "0"
+            "PointsTrump": "0",
+            "PointsObenabe": "0",
+            "PointsUndeufe": "0",
+            "SortingNr": "3"
         },
         {
             "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/rosen-sieben.gif",
             "Type": "7",
             "Color": "Rose",
             "Points": "0",
-            "PointsTrump": "0"
+            "PointsTrump": "0",
+            "PointsObenabe": "0",
+            "PointsUndeufe": "0",
+            "SortingNr": "2"
         },
         {
             "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/rosen-sechs.gif",
             "Type": "6",
             "Color": "Rose",
             "Points": "0",
-            "PointsTrump": "0"
+            "PointsTrump": "0",
+            "PointsObenabe": "0",
+            "PointsUndeufe": "0",
+            "SortingNr": "1"
         },
         {
             "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/schellen-ass.gif",
             "Type": "A",
             "Color": "Schelle",
             "Points": "11",
-            "PointsTrump": "11"
+            "PointsTrump": "11",
+            "PointsObenabe": "0",
+            "PointsUndeufe": "0",
+            "SortingNr": "9"
         },
         {
             "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/schellen-koenig.gif",
             "Type": "K",
             "Color": "Schelle",
             "Points": "4",
-            "PointsTrump": "4"
+            "PointsTrump": "4",
+            "PointsObenabe": "0",
+            "PointsUndeufe": "0",
+            "SortingNr": "8"
         },
         {
             "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/schellen-ober.gif",
             "Type": "O",
             "Color": "Schelle",
             "Points": "3",
-            "PointsTrump": "3"
+            "PointsTrump": "3",
+            "PointsObenabe": "0",
+            "PointsUndeufe": "0",
+            "SortingNr": "7"
         },
         {
             "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/schellen-under.gif",
             "Type": "U",
             "Color": "Schelle",
             "Points": "2",
-            "PointsTrump": "20"
+            "PointsTrump": "20",
+            "PointsObenabe": "0",
+            "PointsUndeufe": "0",
+            "SortingNr": "6"
         },
         {
             "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/schellen-banner.gif",
             "Type": "B",
             "Color": "Schelle",
             "Points": "10",
-            "PointsTrump": "10"
+            "PointsTrump": "10",
+            "PointsObenabe": "0",
+            "PointsUndeufe": "0",
+            "SortingNr": "5"
         },
         {
             "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/schellen-neun.gif",
             "Type": "9",
             "Color": "Schelle",
             "Points": "0",
-            "PointsTrump": "14"
+            "PointsTrump": "14",
+            "PointsObenabe": "0",
+            "PointsUndeufe": "0",
+            "SortingNr": "4"
         },
         {
             "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/schellen-acht.gif",
             "Type": "8",
             "Color": "Schelle",
             "Points": "0",
-            "PointsTrump": "0"
+            "PointsTrump": "0",
+            "PointsObenabe": "0",
+            "PointsUndeufe": "0",
+            "SortingNr": "3"
         },
         {
             "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/schellen-sieben.gif",
             "Type": "7",
             "Color": "Schelle",
             "Points": "0",
-            "PointsTrump": "0"
+            "PointsTrump": "0",
+            "PointsObenabe": "0",
+            "PointsUndeufe": "0",
+            "SortingNr": "2"
         },
         {
             "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/schellen-sechs.gif",
             "Type": "6",
             "Color": "Schelle",
             "Points": "0",
-            "PointsTrump": "0"
+            "PointsTrump": "0",
+            "PointsObenabe": "0",
+            "PointsUndeufe": "0",
+            "SortingNr": "1"
         },
         {
             "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/schilten-ass.gif",
             "Type": "A",
             "Color": "Schilte",
             "Points": "11",
-            "PointsTrump": "11"
+            "PointsTrump": "11",
+            "PointsObenabe": "0",
+            "PointsUndeufe": "0",
+            "SortingNr": "9"
         },
         {
             "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/schilten-koenig.gif",
             "Type": "K",
             "Color": "Schilte",
             "Points": "4",
-            "PointsTrump": "4"
+            "PointsTrump": "4",
+            "PointsObenabe": "0",
+            "PointsUndeufe": "0",
+            "SortingNr": "8"
         },
         {
             "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/schilten-ober.gif",
             "Type": "O",
             "Color": "Schilte",
             "Points": "3",
-            "PointsTrump": "3"
+            "PointsTrump": "3",
+            "PointsObenabe": "0",
+            "PointsUndeufe": "0",
+            "SortingNr": "7"
         },
         {
             "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/schilten-under.gif",
             "Type": "U",
             "Color": "Schilte",
             "Points": "2",
-            "PointsTrump": "20"
+            "PointsTrump": "20",
+            "PointsObenabe": "0",
+            "PointsUndeufe": "0",
+            "SortingNr": "6"
         },
         {
             "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/schilten-banner.gif",
             "Type": "B",
             "Color": "Schilte",
             "Points": "10",
-            "PointsTrump": "10"
+            "PointsTrump": "10",
+            "PointsObenabe": "0",
+            "PointsUndeufe": "0",
+            "SortingNr": "5"
         },
         {
             "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/schilten-neun.gif",
             "Type": "9",
             "Color": "Schilte",
             "Points": "0",
-            "PointsTrump": "14"
+            "PointsTrump": "14",
+            "PointsObenabe": "0",
+            "PointsUndeufe": "0",
+            "SortingNr": "4"
         },
         {
             "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/schilten-acht.gif",
             "Type": "8",
             "Color": "Schilte",
             "Points": "0",
-            "PointsTrump": "0"
+            "PointsTrump": "0",
+            "PointsObenabe": "0",
+            "PointsUndeufe": "0",
+            "SortingNr": "3"
         },
         {
             "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/schilten-sieben.gif",
             "Type": "7",
             "Color": "Schilte",
             "Points": "0",
-            "PointsTrump": "0"
+            "PointsTrump": "0",
+            "PointsObenabe": "0",
+            "PointsUndeufe": "0",
+            "SortingNr": "2"
         },
         {
             "imageUrl": "https://jass.von-ah.me/assets/cards/jassverzeichnis/schilten-sechs.gif",
             "Type": "6",
             "Color": "Schilte",
             "Points": "0",
-            "PointsTrump": "0"
+            "PointsTrump": "0",
+            "PointsObenabe": "0",
+            "PointsUndeufe": "0",
+            "SortingNr": "1"
         },
     ];
     
@@ -321,23 +429,23 @@ function shuffleCards(){
 function distributeCards(cards, playerNumber){
     // sort cards
     cards.sort((a, b) => {
-        const nameA = a.Type.toUpperCase();
-        const nameB = b.Type.toUpperCase();
-        if (nameA < nameB) {
-          return 1;
-        }
-        if (nameA > nameB) {
+        const typeA = a.SortingNr.toUpperCase();
+        const typeB = b.SortingNr.toUpperCase();
+        if (typeA < typeB) {
           return -1;
+        }
+        if (typeA > typeB) {
+          return 1;
         }
         return 0;
     });
     cards.sort((a, b) => {
-        const nameA = a.Color.toUpperCase();
-        const nameB = b.Color.toUpperCase();
-        if (nameA < nameB) {
+        const colorA = a.Color.toUpperCase();
+        const colorB = b.Color.toUpperCase();
+        if (colorA < colorB) {
           return -1;
         }
-        if (nameA > nameB) {
+        if (colorA > colorB) {
           return 1;
         }
         return 0;
