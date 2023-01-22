@@ -461,6 +461,7 @@ function distributeCards(cards, playerNumber){
     newCard.dataset.type = cards[i].Type;
     newCard.dataset.color = cards[i].Color;
     newCard.dataset.playedFrom = playerNumber;
+    newCard.dataset.sortingNr = cards[i].SortingNr;
     newCard.addEventListener('click', () => {
         giveCard(event.target, 0);
     });
@@ -576,14 +577,21 @@ function countPoints(){
     var highestCard = cards[0];
     var firstCard = cards[0];
     var winnerTeam = 0;
-    for(var card = 1; card < cards.length; card++){
+    for(var card = 0; card < cards.length; card++){
         var playedCard = cards[card];
         var higher = false;
         if(trump == playedCard.dataset.color){
-            var cardPoints = parseInt(playedCard.dataset.pointsTrump);
+            var pointsForWinner = parseInt(playedCard.dataset.pointsTrump);
+            if(parseInt(playedCard.dataset.type) == 9){
+                var cardPoints = parseInt(playedCard.dataset.sortingNr);
+            }
+            else{
+                var cardPoints = parseInt(playedCard.dataset.sortingNr);
+            }
         }
         else{
-            var cardPoints = parseInt(playedCard.dataset.points);
+            var pointsForWinner = parseInt(playedCard.dataset.points);
+            var cardPoints = parseInt(playedCard.dataset.sortingNr);
         }
         if(cardPoints > highestValue){
             if(highestCard.dataset.color == trump && playedCard.dataset.color == trump){
@@ -604,7 +612,7 @@ function countPoints(){
             }
             else{
                 // Jeder sonstige Fall wenn die gegeben Karte grösser ist als die bisherigen
-                higher = true;
+                higher = false;
             } 
 
             if(higher == true){
@@ -616,7 +624,7 @@ function countPoints(){
                 winnerTeam = parseInt(highestCard.dataset.playedFrom);
             }
         }
-        sum += cardPoints;
+        sum += pointsForWinner;
     }
     highestCard.classList.add('best');
     switch(winnerTeam){
@@ -634,7 +642,8 @@ function countPoints(){
             break;
         default:
             winnerTeam = 0;
-            console.log('Error, no team won. Next turn: Player ' + winnerTeam)
+            console.log('Error, no team won. Next turn: Player ' + winnerTeam);
+            alert("Fehler aufgetren! Das Spiel geht weiter, jedoch bist du nun an der Reihe.");
             break;
     }
     
