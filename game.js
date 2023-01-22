@@ -442,7 +442,7 @@ function cpuPlayer(playerNumber){
                 currentColor++;
                 cardToGive = deck[count];
             }
-            else if(deck[count].dataset.color == trump){
+            else if(!cardToGive && deck[count].dataset.color == trump){
                 // counts all cards which are trump
                 countTrumpCards++;
                 cardToGive = deck[count];
