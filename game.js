@@ -8,6 +8,7 @@ let player3 = []; // Cards of CPU Player 3
 let trump; // The current trump
 let currentTurn; // Which player is in turn
 let givenCards = 0; // total given cards in this game
+let speed = 1000; // Speed of the CPU Players in ms
 let scores = [ // The scoreboard
     {
         "score": "0"
@@ -573,7 +574,7 @@ function cpuPlayer(playerNumber){
             }
         }
         giveCard(cardToGive, playerNumber);
-    }, 1000);
+    }, speed);
 }
 
 function countPoints(){
@@ -742,4 +743,16 @@ function toggleMusic(){
     else{
         player.muted = true;
     }
+}
+
+function saveSettings(){
+    speed = document.getElementById("playerSpeed").value;
+    localStorage.setItem("speed", speed);
+    localStorage.setItem("playerNames", document.getElementById("playerNames").value);
+}
+
+function loadSettings(){
+    speed = parseInt(localStorage.getItem("speed"));
+    document.getElementById("playerSpeed").value = speed;
+    document.getElementById("playerNames").value = localStorage.getItem("playerNames");
 }
