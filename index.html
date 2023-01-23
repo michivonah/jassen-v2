@@ -53,23 +53,19 @@
         <img class="loader" src="assets/logo/loadingCard.svg" alt="Jasskarte Ladebildschirm">
       </div>
 
-      <nav id="navbar">
-        <div class="inner-width">
-          <a href="#" onclick="scrollToTop();"><img src="assets/logo/logo_white.svg" alt="Logo" title="Logo"></a>
-        </div>
-      </nav>
-
       <div id="content">
         <div id="home">
             <div class="inner-width">
                 <h1>Jassen by Michi</h1>
                 <p class="notice">Dieses Spiel ist noch in Entwicklung.</p>
-                <button onclick="startGame()">Jetzt spielen!</button>
-                <button onclick="toggleSection('changelog', 'block')">Changelog</button>
-                <button onclick="toggleSection('tutorial', 'block')" style="display:none;">Anleitung/Regeln</button>
-                <button onclick="toggleSection('copyright', 'block')">Copyright</button>
-                <button onclick="toggleSection('imprint', 'block')">Impressum</button>
-                <button onclick="toggleSection('settings', 'flex')">Einstellungen</button>
+                <div>
+                  <button class="homeBtn" onclick="startGame()">Jetzt spielen!</button>
+                  <button class="homeBtn" onclick="toggleSection('changelog', 'block')">Changelog</button>
+                  <button class="homeBtn" onclick="toggleSection('tutorial', 'block')" style="display:none;">Anleitung/Regeln</button>
+                  <button class="homeBtn" onclick="toggleSection('copyright', 'block')">Copyright</button>
+                  <button class="homeBtn" onclick="toggleSection('imprint', 'block')">Impressum</button>
+                  <button class="homeBtn" onclick="toggleSection('settings', 'flex')">Einstellungen</button>
+                </div>
                 <p>Kontakt: <a href="mailto:info@michivonah.ch" alt="Kontakt per Mail" title="Kontakt per Mail">info@michivonah.ch</a> | 2023</p>
                 <div id="copyright" class="hiddenSection">
                   <h2>Copyright</h2>
@@ -242,7 +238,7 @@
         setTimeout(function(){
           loadSettings()
           document.getElementById('loadingScreen').style.display = "none";
-        }, 1000);
+        }, 750);
       });
 
       window.addEventListener('blur', () =>{

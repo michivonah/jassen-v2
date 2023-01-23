@@ -90,11 +90,6 @@ body{
     }
 }
 
-/* NAVBAR */
-#navbar{
-    display: none;
-}
-
 /* HOME */
 #home{
     width: 100%;
@@ -117,6 +112,30 @@ body{
     border: 2px solid var(--white);
     border-radius: 12px;
     display: none;
+}
+
+@media screen and (max-width:640px){
+    .homeBtn{
+        width: 80%;
+        height: auto;
+        border: none;
+        border-left: 2px solid var(--white);
+        border-right: 2px solid var(--white);
+        border-radius: 0px;
+        margin: 0 15px;
+    }
+
+    .homeBtn:first-child{
+        border-top-left-radius: 14px;
+        border-top-right-radius: 14px;
+        border-top: 2px solid var(--white);
+    }
+
+    .homeBtn:last-child{
+        border-bottom-left-radius: 14px;
+        border-bottom-right-radius: 14px;
+        border-bottom: 2px solid var(--white);
+    }
 }
 
 /* GAME */
