@@ -532,8 +532,25 @@ body{
 
 /* SETTINGS */
 #settings{
-    display: flex;
+    max-width: calc(100vw - 60px);
+    display: none; /* FLEX */
+    flex-direction: column;
     flex-wrap: wrap;
+    align-content: stretch;
+}
+#settings .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: row;
+    gap: 20px;
+    justify-content: space-around;
+    align-content: space-around;
+    justify-items: center;
+    align-items: center;
+}
+
+#settings input{
+    width: auto;
 }
 
 /* GENERAL */

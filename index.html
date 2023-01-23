@@ -63,14 +63,14 @@
         <div id="home">
             <div class="inner-width">
                 <h1>Jassen by Michi</h1>
-                <p class="notice">Diese Spiel ist noch in Entwicklung.</p>
+                <p class="notice">Dieses Spiel ist noch in Entwicklung.</p>
                 <button onclick="startGame()">Jetzt spielen!</button>
                 <button onclick="toggleSection('changelog', 'block')">Changelog</button>
                 <button onclick="toggleSection('tutorial', 'block')" style="display:none;">Anleitung/Regeln</button>
                 <button onclick="toggleSection('copyright', 'block')">Copyright</button>
                 <button onclick="toggleSection('imprint', 'block')">Impressum</button>
                 <button onclick="toggleSection('settings', 'flex')">Einstellungen</button>
-                <p>Kontakt: <a href="mailto:info@michivonah.ch" alt="Kontakt per Mail" title="Kontakt per Mail">info@michivonah.ch</a></p>
+                <p>Kontakt: <a href="mailto:info@michivonah.ch" alt="Kontakt per Mail" title="Kontakt per Mail">info@michivonah.ch</a> | 2023</p>
                 <div id="copyright" class="hiddenSection">
                   <h2>Copyright</h2>
                   <p>Die Karten sind von jassverzeichnis.ch. Im sp&auml;teren Verlauf der Entwicklung werden diese durch eigene Karten ersetzt.</p>
@@ -93,16 +93,18 @@
                 </div>
                 <div id="settings" class="hiddenSection">
                   <h2>Einstellungen</h2>
-                  <label for="cardSet" style="display: none;">Kartendesign</label>
-                  <select id="cardSet" name="cardSet" onchange="saveSettings()" style="display: none;">
-                    <option value="jassverzeichnis" selected>jassverzeichnis.ch</option>
-                    <option value="michivonah" disabled>jass.von-ah.me</option>
-                    <option value="yourown" disabled>Custom</option>
-                  </select>
-                  <label for="playerNames">Namen der Mitspieler (durch Komma getrennt)</label>
-                  <input id="playerNames" name="playerNames" type="text" placeholder="Sepp, Kari, Heidi" value="Sepp, Kari, Heidi" onchange="saveSettings()">
-                  <label for="playerSpeed">Geschwindigkeit der Gegner (in Millisekunden)</label>
-                  <input id="playerSpeed" name="playerSpeed" type="number" placeholder="1000ms" value="1000" onchange="saveSettings()">
+                  <div class="container">
+                    <label for="cardSet" style="display: none;">Kartendesign</label>
+                    <select id="cardSet" name="cardSet" onchange="saveSettings()" style="display: none;">
+                      <option value="jassverzeichnis" selected>jassverzeichnis.ch</option>
+                      <option value="michivonah" disabled>jass.von-ah.me</option>
+                      <option value="yourown" disabled>Custom</option>
+                    </select>
+                    <label for="playerNames">Namen der Mitspieler (durch Komma getrennt)</label>
+                    <input id="playerNames" name="playerNames" type="text" inputmode="text" placeholder="Sepp, Kari, Heidi" value="Sepp, Kari, Heidi" onchange="saveSettings()">
+                    <label for="playerSpeed">Geschwindigkeit der Gegner (in Millisekunden)</label>
+                    <input id="playerSpeed" name="playerSpeed" type="number" inputmode="numeric" min="500" placeholder="1000ms" value="1000" onchange="saveSettings()">
+                  </div>
                 </div>
                 <div id="changelog" class="hiddenSection">
                   <h2>Changelog</h2>
@@ -110,7 +112,7 @@
                   <ul>
                     <li>Fehler beim Punktez&auml;hlen nun behoben</li>
                     <li>Algorithmus der Gegner komplett &uuml;berarbeitet</li>
-                    <li>Arbeit an den Einstellungen begonnen</li>
+                    <li>Einstellungen hinzugef&uuml;gt</li>
                     <li>Gegner-Spielgeschwindigkeit kann nun angepasst werden</li>
                     <li>Kleine Anpassungen</li>
                   </ul>
