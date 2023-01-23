@@ -66,8 +66,10 @@
                 <p class="notice">Diese Spiel ist noch in Entwicklung.</p>
                 <button onclick="startGame()">Jetzt spielen!</button>
                 <button onclick="toggleSection('changelog', 'block')">Changelog</button>
+                <button onclick="toggleSection('tutorial', 'block')" style="display:none;">Anleitung/Regeln</button>
                 <button onclick="toggleSection('copyright', 'block')">Copyright</button>
                 <button onclick="toggleSection('imprint', 'block')">Impressum</button>
+                <button onclick="toggleSection('settings', 'block')" style="display:none;">Einstellungen</button>
                 <p>Kontakt: <a href="mailto:info@michivonah.ch" alt="Kontakt per Mail" title="Kontakt per Mail">info@michivonah.ch</a></p>
                 <div id="copyright" class="hiddenSection">
                   <h2>Copyright</h2>
@@ -84,12 +86,32 @@
                   <p><i class="ai-envelope"></i> info@michivonah.ch</p>
                   <p><i class="ai-phone"></i> 078 247 15 16 (Nur Nachrichten, keine Anrufe!)</p>
                 </div>
+                <div id="tutorial" class="hiddenSection">
+                  <h2>Anleitung/Regeln</h2>
+                  <p>Schieber. Du spielst zu zusammen mit dem oberen Spieler.</p>
+                  <p>Pro Runde wird bis 157 Punkte gespielt. Jeder Spieler erh&auml;kt neun Karten.</p>
+                </div>
+                <div id="settings" class="hiddenSection">
+                  <h2>Einstellungen</h2>
+                  <label for="cardSet">Kartendesign</label>
+                  <select id="cardSet" name="cardSet">
+                    <option value="jassverzeichnis" selected>jassverzeichnis.ch</option>
+                    <option value="michivonah" disabled>jass.von-ah.me</option>
+                    <option value="yourown" disabled>Custom</option>
+                  </select>
+                  <label for="playerNames">Namen der Mitspieler (durch Komma getrennt)</label>
+                  <input id="playerNames" name="playerNames" type="text" placeholder="Sepp, Kari, Heidi" value="Sepp, Kari, Heidi">
+                  <label for="playerSpeed">Geschwindigkeit der Gegner (in Millisekunden)</label>
+                  <input id="playerSpeed" name="playerSpeed" type="number" placeholder="1000ms" value="1000">
+                  <button>Speichern</button>
+                </div>
                 <div id="changelog" class="hiddenSection">
                   <h2>Changelog</h2>
                   <p>23. Januar 2023</p>
                   <ul>
                     <li>Fehler beim Punktez&auml;hlen nun behoben</li>
                     <li>Algorithmus der Gegner komplett &uuml;berarbeitet</li>
+                    <li>Arbeit an den Einstellungen begonnen</li>
                   </ul>
                   <p>22. Januar 2023</p>
                   <ul>
