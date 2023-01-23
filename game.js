@@ -545,25 +545,34 @@ function cpuPlayer(playerNumber){
         var deck = document.getElementsByClassName('player' + playerNumber);
         var firstGivenCard = document.getElementsByClassName('given')[0];
         if(firstGivenCard == null){
-            firstGivenCard = deck[5];
+            firstGivenCard = deck[0];
         }
-        var currentColor = firstGivenCard.dataset.color;
-        var cardToGive = deck[0];
-        // HIER DEN ALGORITHMUS DER GEGNER PROGRAMMIEREN
-        /*for(var i = 0; i < deck.length; i++){
-            if(deck(i).dataset.color == currentColor){
-                cardToGive = deck[i];
-                break;
-            }
-        }*/
-        giveCard(cardToGive, playerNumber);
-        /*
-        if(cardToGive){
-            giveCard(cardToGive, playerNumber);
+        if(firstGivenCard.dataset.color){
+            var currentColor = firstGivenCard.dataset.color;
         }
         else{
-            giveCard(deck[Math.floor(Math.random() * (deck.length))], playerNumber);
-        }*/
+            var currentColor = trump;
+        }
+        var cardToGive = deck[0];
+        // HIER DEN ALGORITHMUS DER GEGNER PROGRAMMIEREN
+        for(var i = 0; i < deck.length; i++){
+            var cardScore = 0; // Min: 0, Max: 100
+            if(deck[i].dataset.color == currentColor) cardScore += 50;
+            if(deck[i].dataset.color == trump) cardScore += 40;
+            if(parseInt(deck[i].dataset.sortingNr) < 4) cardScore += 1;
+            else if(parseInt(deck[i].dataset.sortingNr) == 4) cardScore += 8;
+            else if(parseInt(deck[i].dataset.sortingNr) == 5) cardScore += 9;
+            else if(parseInt(deck[i].dataset.sortingNr) >= 6 && parseInt(deck[i].dataset.sortingNr) < 8) cardScore += 10;
+            else if(parseInt(deck[i].dataset.sortingNr) == 9) cardScore += 9;
+            deck[i].dataset.cardScoring = cardScore;
+            console.log(cardScore);
+        }
+        for(var i = 0; i < deck.length; i++){
+            if(parseInt(deck[i].dataset.cardScoring) >= parseInt(cardToGive.dataset.cardScoring)){
+                cardToGive = deck[i];
+            }
+        }
+        giveCard(cardToGive, playerNumber);
     }, 1000);
 }
 
@@ -632,14 +641,14 @@ function countPoints(){
         case 0:
         case 2:
             scores[0].score = parseInt(scores[0].score) + sum;
-            yourPoints.textContent = "Du: " + scores[0].score;
             if(givenCards > 35) scores[0].score = parseInt(scores[0].score) + 5;
+            yourPoints.textContent = "Du: " + scores[0].score;
             break;
         case 1:
         case 3:
             scores[1].score = parseInt(scores[1].score) + sum;
-            opponentPoints.textContent = "Gegner:  " + scores[1].score;
             if(givenCards > 35) scores[0].score = parseInt(scores[0].score) + 5;
+            opponentPoints.textContent = "Gegner:  " + scores[1].score;
             break;
         default:
             winnerTeam = 0;
