@@ -605,12 +605,8 @@ function countPoints(){
             var cardPoints = parseInt(playedCard.dataset.sortingNr);
         }
         if(cardPoints > highestValue){
-            if(highestCard.dataset.color == trump && playedCard.dataset.color == trump){
-                // Die Karte welche bisher die grösste war ist ein Trumpf. Ausserdem ist die gegegebene Karte auch ein Trumpf mit einem höheren Wert.
-                higher = true;
-            }
-            else if(highestCard.dataset.color != trump && playedCard.dataset.color == trump){
-                // die karte welche bisher die grösste war ist kein trumpf, die gegebene jedoch schon.
+            if(playedCard.dataset.color == trump){
+                // Die gegegebene Karte auch ein Trumpf mit einem höheren Wert.
                 higher = true;
             }
             else if(highestCard.dataset.color != trump && playedCard.dataset.color == firstCard.dataset.color){

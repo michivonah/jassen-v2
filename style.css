@@ -587,7 +587,7 @@ body{
     left: 0;
     width: 4px;
     height: 1.4rem;
-    background: var(--black);
+    background: var(--accent);
 }
 
 a{
