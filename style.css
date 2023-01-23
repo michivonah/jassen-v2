@@ -530,6 +530,11 @@ body{
     display: none;
 }
 
+/* SETTINGS */
+#settings{
+    display: flex;
+    flex-wrap: wrap;
+}
 
 /* GENERAL */
 .notice{
@@ -575,4 +580,28 @@ button{
 
 button:is(:hover, :focus){
     background: var(--brown);
+}
+
+input{
+    outline: none;
+    width: auto;
+    height: auto;
+    margin: 10px 15px;
+    padding: 10px 30px;
+    font-size: 1rem;
+    transition: var(--transition);
+    caret-color: var(--white);
+    background: var(--accent);
+    border: 2px solid var(--white);
+    border-radius: 14px;
+    color: var(--white);
+}
+
+input:is(:hover, :focus, :active){
+    outline: none;
+}
+
+::placeholder{
+    color: var(--white);
+    opacity: 80%;
 }

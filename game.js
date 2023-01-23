@@ -594,7 +594,7 @@ function countPoints(){
         if(trump == playedCard.dataset.color){
             var pointsForWinner = parseInt(playedCard.dataset.pointsTrump);
             if(parseInt(playedCard.dataset.type) == 9){
-                var cardPoints = parseInt(playedCard.dataset.sortingNr);
+                var cardPoints = 10;
             }
             else{
                 var cardPoints = parseInt(playedCard.dataset.sortingNr);
@@ -663,7 +663,7 @@ function countPoints(){
         currentTurn = winnerTeam + 1;
         if(currentTurn > 3) currentTurn = 0;
         nextPlayer();
-    }, 1000);
+    }, speed);
 
     if(givenCards > 35) endGame();
 }
@@ -697,7 +697,7 @@ function endGame(){
     endscreen.style.display = "flex";
 }
 
-function newGame(){
+function newGame(withoutStart){
     var endscreen = document.getElementById('gameSummary');
     endscreen.style.display = "none";
     player0 = [];
@@ -705,10 +705,10 @@ function newGame(){
     player2 = [];
     player3 = [];
     givenCards = 0;
-    startGame();
+    if(!withoutStart) startGame();
 }
 
-function resetGame(confirmMessage){
+function resetGame(confirmMessage, close){
     if(confirmMessage != null){
         var confirmed = confirm(confirmMessage);
     }
@@ -722,15 +722,18 @@ function resetGame(confirmMessage){
         }
         var jassteppich = document.getElementById('teppichContainer');
         jassteppich.innerHTML = "";
-        newGame();
+        if(!close) newGame();
     }
 }
 
 function closeGame(){
-    resetGame("Die aktuelle Runde wird abgebrochen und du kehrst zum Startbildschirm zurück. Bist du sicher?");
+    resetGame("Die aktuelle Runde wird abgebrochen und du kehrst zum Startbildschirm zurück. Bist du sicher?", true);
     document.getElementById('home').style.display = "grid";
     document.getElementById('game').style.display = "none";
     window.scroll(0, 0);
+    document.getElementById('teppichContainer').innerHTML = "";
+    scores[0].score = "0";
+    scores[1].score = "0";
 }
 
 function toggleMusic(){
