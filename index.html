@@ -20,7 +20,7 @@
     <meta name="description" content="Jassen by Michi">
     <meta name="keywords" content="Jassen, Michi, Michi von Ah, von Ah, von Ah Jassen, Jassen von Ah, Jassen by Michi, Jassen Michi">
     <meta name="author" content="Michi von Ah">
-    <meta name="robots" content="noindex">
+    <meta name="robots" content="index">
     <meta http-equiv="expires" content="43200">
 
     <meta property="og:title" content="Jassen by Michi">
@@ -101,11 +101,16 @@
                     <label for="playerNames">Namen der Mitspieler (durch Komma getrennt)</label>
                     <input id="playerNames" name="playerNames" type="text" inputmode="text" placeholder="Sepp, Kari, Heidi" value="Sepp, Kari, Heidi" onchange="saveSettings()">
                     <label for="playerSpeed">Geschwindigkeit der Gegner (in Millisekunden)</label>
-                    <input id="playerSpeed" name="playerSpeed" type="number" inputmode="numeric" min="500" placeholder="1000ms" value="1000" onchange="saveSettings()">
+                    <input id="playerSpeed" name="playerSpeed" type="number" inputmode="numeric" min="500" placeholder="1000" value="1000" onchange="saveSettings()">
                   </div>
                 </div>
                 <div id="changelog" class="hiddenSection">
                   <h2>Changelog</h2>
+                  <p>24. Januar 2023</p>
+                  <ul>
+                    <li>Fehler beim Laden der Spieler Geschwindigkeit behoben</li>
+                    <li>Ackee Analytics hinzugef&uuml;gt</li>
+                  </ul>
                   <p>23. Januar 2023</p>
                   <ul>
                     <li>Fehler beim Punktez&auml;hlen nun behoben</li>
