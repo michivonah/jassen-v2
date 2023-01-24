@@ -752,6 +752,7 @@ function saveSettings(){
 
 function loadSettings(){
     speed = parseInt(localStorage.getItem("speed"));
+    if(speed == null || speed < 500) speed = 1000;
     document.getElementById("playerSpeed").value = speed;
     document.getElementById("playerNames").value = localStorage.getItem("playerNames");
 }
