@@ -11,10 +11,12 @@ let givenCards = 0; // total given cards in this game
 let speed = 1000; // Speed of the CPU Players in ms
 let scores = [ // The scoreboard
     {
-        "score": "0"
+        "score": "0",
+        "lastRound": "0"
     },
     {
-        "score": "0"
+        "score": "0",
+        "lastRound": "0"
     }
 ];
 
@@ -639,13 +641,13 @@ function countPoints(){
         case 2:
             scores[0].score = parseInt(scores[0].score) + sum;
             if(givenCards > 35) scores[0].score = parseInt(scores[0].score) + 5;
-            yourPoints.textContent = "Du: " + scores[0].score;
+            yourPoints.textContent = "" + scores[0].score;
             break;
         case 1:
         case 3:
             scores[1].score = parseInt(scores[1].score) + sum;
-            if(givenCards > 35) scores[0].score = parseInt(scores[0].score) + 5;
-            opponentPoints.textContent = "Gegner:  " + scores[1].score;
+            if(givenCards > 35) scores[1].score = parseInt(scores[1].score) + 5;
+            opponentPoints.textContent = "" + scores[1].score;
             break;
         default:
             winnerTeam = 0;
@@ -694,6 +696,18 @@ function endGame(){
 }
 
 function newGame(withoutStart){
+    var yourPoints = document.getElementById('yourPoints');
+    var opponentPoints = document.getElementById('opponentPoints');
+    var yourPointsOld = document.getElementById('yourPointsOld');
+    var opponentPointsOld = document.getElementById('opponentPointsOld');
+    scores[0].lastRound = parseInt(scores[0].score);
+    scores[1].lastRound = parseInt(scores[1].score);
+    scores[0].score = 0;
+    scores[1].score = 0;
+    yourPoints.textContent = scores[0].score;
+    opponentPoints.textContent = scores[1].score;
+    yourPointsOld.textContent = scores[0].lastRound;
+    opponentPointsOld.textContent = scores[1].lastRound;
     var endscreen = document.getElementById('gameSummary');
     endscreen.style.display = "none";
     player0 = [];
