@@ -486,7 +486,7 @@ body{
     background: var(--accent);
     color: var(--white);
     position: absolute;
-    top: 50%;
+    top: 70%;
     transform: translateY(-50%);
     padding: 10px;
     font-size: 1.2rem;
@@ -500,6 +500,46 @@ body{
 
 #gameSummary i{
     font-size: 4rem;
+    --webkit-animation: wiggleIcon 1s infinite;
+    animation: wiggleIcon 1s infinite;
+    transform: rotate(30deg);
+    transition: var(--transition);
+}
+
+@keyframes wiggleIcon{
+    0%{
+        transform: rotate(30deg);
+    }
+    25%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-30deg);
+    }
+    75%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(30deg);
+    }
+}
+
+@-webkit-keyframes wiggleIcon{
+    0%{
+        transform: rotate(30deg);
+    }
+    25%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-30deg);
+    }
+    75%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(30deg);
+    }
 }
 
 /* CONTROL BUTTONS */

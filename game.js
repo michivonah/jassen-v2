@@ -595,11 +595,15 @@ function countPoints(){
         var higher = false;
         if(trump == playedCard.dataset.color){
             var pointsForWinner = parseInt(playedCard.dataset.pointsTrump);
-            if(parseInt(playedCard.dataset.type) == 9){
-                var cardPoints = 10;
+            var cardPoints = 20;
+            if(parseInt(playedCard.dataset.type) == 9 || playedCard.dataset.type == "9"){
+                cardPoints += 10;
+            }
+            else if(playedCard.dataset.type == "U"){
+                cardPoints += 11;
             }
             else{
-                var cardPoints = parseInt(playedCard.dataset.sortingNr);
+                cardPoints += parseInt(playedCard.dataset.sortingNr);
             }
         }
         else{
