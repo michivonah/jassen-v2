@@ -510,7 +510,7 @@ function setTrump(trumpNumber){
 }
 
 function giveCard(card, playerNumber){
-    if(playerNumber == currentTurn){ // You can only give a card if its your turn
+    if(playerNumber == currentTurn && !card.classList.contains('given')){ // You can only give a card if its your turn
         givenCards++;
         var jassteppich = document.getElementById('teppichContainer');
         card.classList.add("given");
@@ -520,6 +520,9 @@ function giveCard(card, playerNumber){
         else card.classList.add("playerRight");
         jassteppich.append(card);
         nextPlayer();
+    }
+    else if(card.classList.contains('given')){
+        showHint("Du musst eine deiner Karten geben.", "ai-triangle-alert-fill");
     }
     else if(playerNumber == 0){
         showHint("Du bist nicht an der Reihe!", "ai-triangle-alert-fill");
