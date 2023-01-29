@@ -671,6 +671,12 @@ body{
     width: auto;
 }
 
+@media screen and (max-width:640px){
+    #settings .container{
+        grid-template-columns: 1fr;
+    }
+}
+
 /* GENERAL */
 .notice{
     font-size: 1.2rem;
@@ -693,10 +699,13 @@ a{
     text-decoration: none;
     font-style: normal;
     color: inherit;
+    transition: var(--transition);
 }
 
 a:is(:hover, :focus){
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: var(--accent);
     font-style: normal;
 }
 
