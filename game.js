@@ -766,6 +766,7 @@ function saveSettings(){
     speed = document.getElementById("playerSpeed").value;
     localStorage.setItem("speed", speed);
     localStorage.setItem("playerNames", document.getElementById("playerNames").value);
+    showPlayerNames();
 }
 
 function loadSettings(){
@@ -774,4 +775,16 @@ function loadSettings(){
         document.getElementById("playerSpeed").value = speed;
     }
     document.getElementById("playerNames").value = localStorage.getItem("playerNames");
+    showPlayerNames();
+}
+
+function showPlayerNames(){
+    var playerNames = localStorage.getItem("playerNames");
+    var playerNamesSplit = playerNames.split(",");
+    var cpuPlayerDivs = document.getElementsByClassName('cpuPlayer');
+    for(var i = 0; i < cpuPlayerDivs.length; i++){
+        var currentName = playerNamesSplit[i];
+        cpuPlayerDivs[i].childNodes[0].src = "https://api.dicebear.com/5.x/shapes/svg?seed=" + currentName;
+        cpuPlayerDivs[i].childNodes[1].textContent = currentName;
+    }
 }

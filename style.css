@@ -409,6 +409,59 @@ body{
     border: none;
 }
 
+/* CPU Players */
+#cpuPlayers{
+    display: block;
+}
+
+@media screen and (max-width:700px){
+    #cpuPlayers{
+        display: none;
+    }
+}
+
+.cpuPlayer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    user-select: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cpuPlayer img{
+    width: 40px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.cpuPlayer:nth-child(1){
+    position: absolute;
+    top: 40%;
+    left: calc(50% - 255px);
+}
+
+.cpuPlayer:nth-child(2){
+    position: absolute;
+    top: 30px;
+    left: 50%;
+}
+
+.cpuPlayer:nth-child(2) > img{
+    display: none;
+}
+
+.cpuPlayer:nth-child(3){
+    position: absolute;
+    top: 40%;
+    left: calc(50% + 255px);
+}
+
 /* TRUMP CHOOSER */
 #trumpChooser{
     width: auto;
