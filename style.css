@@ -705,7 +705,7 @@ a{
 a:is(:hover, :focus){
     text-decoration: underline;
     text-decoration-style: wavy;
-    text-decoration-color: var(--accent);
+    text-decoration-color: inherit;
     font-style: normal;
 }
 
