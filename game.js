@@ -780,10 +780,12 @@ function loadSettings(){
         document.getElementById("playerSpeed").value = speed;
     }
     if(localStorage.getItem("playerNames")){
+        document.getElementById("playerNames").value = localStorage.getItem("playerNames");
+        showPlayerNames();
+    }
+    else{
         localStorage.setItem("playerNames", "Sepp, Kari, Heidi");
     }
-    document.getElementById("playerNames").value = localStorage.getItem("playerNames");
-    showPlayerNames();
 }
 
 function showPlayerNames(){
