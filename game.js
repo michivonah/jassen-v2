@@ -784,7 +784,7 @@ function showPlayerNames(){
     var cpuPlayerDivs = document.getElementsByClassName('cpuPlayer');
     for(var i = 0; i < cpuPlayerDivs.length; i++){
         var currentName = playerNamesSplit[i];
-        cpuPlayerDivs[i].childNodes[0].src = "https://api.dicebear.com/5.x/shapes/svg?seed=" + currentName;
+        if(i == 1) currentName += " (mit dir)";
         cpuPlayerDivs[i].childNodes[1].textContent = currentName;
     }
 }

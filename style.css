@@ -421,12 +421,8 @@ body{
 }
 
 .cpuPlayer{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
+    width: 400px;
+    text-align: center;
     user-select: none;
     position: absolute;
     top: 50%;
@@ -434,32 +430,24 @@ body{
     transform: translate(-50%, -50%);
 }
 
-.cpuPlayer img{
-    width: 40px;
-    height: auto;
-    border-radius: 50%;
-}
-
 .cpuPlayer:nth-child(1){
     position: absolute;
-    top: 40%;
-    left: calc(50% - 255px);
+    top: 45%;
+    left: -55%;
+    transform: rotate(-90deg);
 }
 
 .cpuPlayer:nth-child(2){
     position: absolute;
-    top: 30px;
+    top: -5%;
     left: 50%;
-}
-
-.cpuPlayer:nth-child(2) > img{
-    display: none;
 }
 
 .cpuPlayer:nth-child(3){
     position: absolute;
-    top: 40%;
-    left: calc(50% + 255px);
+    top: 45%;
+    left: 55%;
+    transform: rotate(90deg);
 }
 
 /* TRUMP CHOOSER */
