@@ -645,12 +645,14 @@ function countPoints(){
         case 2:
             scores[0].score = parseInt(scores[0].score) + sum;
             if(givenCards > 35) scores[0].score = parseInt(scores[0].score) + 5;
+            if(givenCards > 35 && parseInt(scores[1].score) == 0) scores[0].score = parseInt(scores[0].score) + 100;
             yourPoints.textContent = "" + scores[0].score;
             break;
         case 1:
         case 3:
             scores[1].score = parseInt(scores[1].score) + sum;
             if(givenCards > 35) scores[1].score = parseInt(scores[1].score) + 5;
+            if(givenCards > 35 && parseInt(scores[0].score) == 0) scores[1].score = parseInt(scores[1].score) + 100;
             opponentPoints.textContent = "" + scores[1].score;
             break;
         default:
@@ -704,8 +706,8 @@ function newGame(withoutStart){
     var opponentPoints = document.getElementById('opponentPoints');
     var yourPointsOld = document.getElementById('yourPointsOld');
     var opponentPointsOld = document.getElementById('opponentPointsOld');
-    scores[0].lastRound = parseInt(scores[0].score);
-    scores[1].lastRound = parseInt(scores[1].score);
+    scores[0].lastRound = parseInt(scores[0].lastRound) + parseInt(scores[0].score);
+    scores[1].lastRound = parseInt(scores[1].lastRound) + parseInt(scores[1].score);
     scores[0].score = 0;
     scores[1].score = 0;
     yourPoints.textContent = scores[0].score;
