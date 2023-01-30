@@ -44,7 +44,7 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="manifest" href="manifest.json">
-    <script async src="https://data.mchvnh.ch/tracker.js"></script>
+    <script src="https://data.mchvnh.ch/tracker.js"></script>
 
 </head>
 <body>
@@ -292,8 +292,7 @@
       <script>
       // Loading
       window.addEventListener('load', () => {
-        setTimeout(function(){
-          loadSettings();
+        loadSettings();
           if(localStorage.getItem("enableDetailedTracking") == true || localStorage.getItem("enableDetailedTracking") == "true"){
             var enableDetailedTracking = true;
           }
@@ -304,6 +303,7 @@
 	          detailed: enableDetailedTracking,
 	          ignoreLocalhost: true
           }).record('ef34dc10-b6f4-46ed-8365-fba89d65743d');
+        setTimeout(function(){
           document.getElementById('loadingScreen').style.display = "none";
         }, 750);
       });
