@@ -44,7 +44,7 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="manifest" href="manifest.json">
-    <script async src="https://data.mchvnh.ch/tracker.js" data-ackee-server="https://data.mchvnh.ch" data-ackee-domain-id="ef34dc10-b6f4-46ed-8365-fba89d65743d"></script>
+    <script async src="https://data.mchvnh.ch/tracker.js"></script>
 
 </head>
 <body>
@@ -64,7 +64,7 @@
                   <button class="homeBtn" onclick="toggleSection('changelog', 'block')">Changelog</button>
                   <button class="homeBtn" onclick="toggleSection('tutorial', 'block')" style="display:none;">Anleitung/Regeln</button>
                   <button class="homeBtn" onclick="toggleSection('copyright', 'block')">Copyright</button>
-                  <button class="homeBtn" onclick="toggleSection('imprint', 'block')">Impressum</button>
+                  <button class="homeBtn" onclick="toggleSection('legal', 'block')">Rechtliches</button>
                   <button class="homeBtn" onclick="toggleSection('settings', 'flex')">Einstellungen</button>
                 </div>
                 <p>Kontakt: <a href="mailto:info@michivonah.ch" alt="Kontakt per Mail" title="Kontakt per Mail">info@michivonah.ch</a> | 2023</p>
@@ -76,12 +76,17 @@
                   <p>Die Animation beim &uuml;berfahren der Karten ist von https://codepen.io/william-goldsworthy/pen/JzVajj</p>
                   <p>Die Hintergrundmusik ist <a href="https://pixabay.com/de/users/comastudio-26079283/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=102685">ComaStudio</a> von <a href="https://pixabay.com/music//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=102685">Pixabay</a>.</p>
                 </div>
-                <div id="imprint" class="hiddenSection">
+                <div id="legal" class="hiddenSection">
                   <h2>Impressum</h2>
                   <p><i class="ai-person"></i> Michael von Ah</p>
                   <p><i class="ai-location"></i> Obwalden, Switzerland</p>
                   <p><i class="ai-envelope"></i> info@michivonah.ch</p>
                   <p><i class="ai-phone"></i> 078 247 15 16 (Nur Nachrichten, keine Anrufe!)</p>
+                  <h2>Datenschutz</h2>
+                  <p>Dieses Jass-Spiel erfasst beim Spielen keine personenbezogenen Daten. Die Seitenaufrufe werden jedoch mit einer Analytics-Software namens &quot;Ackee&quot; erfasst. Wenn der Nutzer in den Einstellungen einer Option zustimmt, werden weitere Daten wie das Ger&auml;t, das f&uuml;r den Aufruf verwendet wird, erhoben. Diese Daten werden auf den Servern von &quot;Netlify&quot; gehostet und in einer MongoDB-Datenbank bei &quot;MongoDB Atlas&quot; gespeichert, die auf Servern von Amazon AWS in Frankfurt gehostet werden. Die Webserver k&ouml;nnen Log-Dateien erstellen, in denen die IP-Adressen der Nutzer ersichtlich sind.</p>
+                  <p>Das Spiel verwendet ausserdem den Dienst &quot;Google Web Fonts&quot; zum Laden externer Schriftarten. Ein eingebettetes Google Forms-Formular kann eventuell weitere Daten erheben. Die Einstellungen, die vom Benutzer im Spiel get&auml;tigt werden, werden nur lokal auf dem jeweiligen Ger&auml;t in einem Cookie gespeichert.</p>
+                  <p>Bitte beachten Sie auch die Datenschutzerkl&auml;rungen von &quot;Netlify&quot;, &quot;MongoDB Atlas&quot;, &quot;Google Web Fonts&quot; und &quot;Google Forms&quot;.</p>
+                  <p>Quelle: ChatGPT</p>
                 </div>
                 <div id="tutorial" class="hiddenSection">
                   <h2>Anleitung/Regeln</h2>
@@ -102,10 +107,16 @@
                     <input id="playerNames" name="playerNames" type="text" inputmode="text" placeholder="Sepp, Kari, Heidi" value="Sepp, Kari, Heidi" onchange="saveSettings()">
                     <label for="playerSpeed">Geschwindigkeit der Gegner (in Millisekunden)</label>
                     <input id="playerSpeed" name="playerSpeed" type="number" inputmode="numeric" min="500" placeholder="1000" value="1000" onchange="saveSettings()">
+                    <label for="trackingOptIn">Weitere Analysedaten erfassen (optional)</label>
+                    <input id="trackingOptIn" name="trackingOptIn" type="checkbox" onchange="saveSettings()">
                   </div>
                 </div>
                 <div id="changelog" class="hiddenSection">
                   <h2>Changelog</h2>
+                  <p>30. Januar 2023</p>
+                  <ul>
+                    <li>Datenschutzerkl&auml;rung und erweitertes Tracking hinzugef&uuml;gt</li>
+                  </ul>
                   <p>29. Januar 2023</p>
                   <ul>
                     <li>Namen der Mitspieler werden nun angezeigt</li>
@@ -282,7 +293,17 @@
       // Loading
       window.addEventListener('load', () => {
         setTimeout(function(){
-          loadSettings()
+          loadSettings();
+          if(localStorage.getItem("enableDetailedTracking") == true || localStorage.getItem("enableDetailedTracking") == "true"){
+            var enableDetailedTracking = true;
+          }
+          else{
+            var enableDetailedTracking = false;
+          }
+          ackeeTracker.create('https://data.mchvnh.ch', {
+	          detailed: enableDetailedTracking,
+	          ignoreLocalhost: true
+          }).record('ef34dc10-b6f4-46ed-8365-fba89d65743d');
           document.getElementById('loadingScreen').style.display = "none";
         }, 750);
       });

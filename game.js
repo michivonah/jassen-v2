@@ -772,6 +772,7 @@ function saveSettings(){
     localStorage.setItem("speed", speed);
     localStorage.setItem("playerNames", document.getElementById("playerNames").value);
     showPlayerNames();
+    localStorage.setItem("enableDetailedTracking", document.getElementById('trackingOptIn').checked);
 }
 
 function loadSettings(){
@@ -785,6 +786,9 @@ function loadSettings(){
     }
     else{
         localStorage.setItem("playerNames", "Sepp, Kari, Heidi");
+    }
+    if(localStorage.getItem("enableDetailedTracking") == true || localStorage.getItem("enableDetailedTracking") == "true"){
+        document.getElementById('trackingOptIn').checked = true;
     }
 }
 
