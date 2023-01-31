@@ -498,6 +498,13 @@ body{
     background: var(--brown);
 }
 
+.shiftTrumpButton{
+    width: 100%;
+    height: auto;
+    margin: 15px 0;
+    padding: 10px 20px;
+}
+
 /* HINT */
 #hint{
     width: 80%;

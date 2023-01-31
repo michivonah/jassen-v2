@@ -479,8 +479,8 @@ function generateTrump(cpuMode){
         trumpChooser.style.display = "block";
     }
     else{
-        var random = Math.floor(Math.random() * 4);
-        setTrump(random);
+        var random = Math.floor(Math.random() * 3) + 1;
+        shiftTrump(random);
     }
 }
 
@@ -507,6 +507,59 @@ function setTrump(trumpNumber){
     else if(trump == "Rose") trumpIcon.src = "assets/cards/rose.svg";
     else if(trump == "Schelle") trumpIcon.src = "assets/cards/schelle.svg";
     else trumpIcon.src = "assets/cards/schilte.svg";
+}
+
+function shiftTrump(playerNum){
+    switch(playerNum){
+        case 0:
+            var deck = player0;
+        case 1:
+            var deck = player1;
+        case 2:
+            var deck = player2;
+        case 3:
+        default:
+            var deck = player3;
+    }
+    var bestChoice = Math.floor(Math.random() * 4);
+    var trumpCount = [
+        {
+            "name": "Eichel",
+            "count": "0"
+        },
+        {
+            "name": "Rose",
+            "count": "0"
+        },
+        {
+            "name": "Schelle",
+            "count": "0"
+        },
+        {
+            "name": "Schilte",
+            "count": "0"
+        }
+    ];
+    for(var i = 0; i < deck.length; i++){
+        switch(deck[i].Color){
+            case "Eichel":
+                trumpCount[0].count = parseInt(trumpCount[0].count) + 1;
+            case "Rose":
+                trumpCount[1].count = parseInt(trumpCount[1].count) + 1;
+            case "Schelle":
+                trumpCount[2].count = parseInt(trumpCount[2].count) + 1;
+            case "Schilte":
+                trumpCount[3].count = parseInt(trumpCount[3].count) + 1;
+            default:
+                console.log("An error happend while shifting the trump. Please report this error with the included form. (Second button top left)");
+        }
+    }
+    for(var chooseLoop = 0; chooseLoop < 3; chooseLoop++){
+        if(parseInt(trumpCount[chooseLoop].count) > parseInt(trumpCount[bestChoice].count)){
+            bestChoice = chooseLoop;
+        }
+    }
+    setTrump(bestChoice);
 }
 
 function giveCard(card, playerNumber){
