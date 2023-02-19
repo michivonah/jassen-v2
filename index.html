@@ -37,7 +37,7 @@
     <meta name="twitter:site" content="@michivonah">
     <meta name="twitter:creator" content="@michivonah">
 
-    <meta name="theme-color" content="#3479c85798db">
+    <meta name="theme-color" content="#5798db">
     <meta name="mobile-web-app-status-bar-style" content="#79c857">
     <meta name="apple-mobile-web-app-status-bar-style" content="#79c857">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
@@ -113,6 +113,14 @@
                 </div>
                 <div id="changelog" class="hiddenSection">
                   <h2>Changelog</h2>
+                  <p>19. Februar 2023</p>
+                  <ul>
+                    <li>Änderungen an der PWA Funktion</li>
+                  </ul>
+                  <p>04. Februar 2023</p>
+                  <ul>
+                    <li>Funktion um das Spiel zu beenden begonnen</li>
+                  </ul>
                   <p>31. Januar 2023</p>
                   <ul>
                     <li>M&ouml;glichkeit hinzugef&uuml;gt die Wahl des Trumpfs zu schieben (an den Partner)</li>
@@ -268,10 +276,15 @@
                 <p id="hintTxt"></p>
             </div>
             <div id="gameSummary">
-                <i id="summaryIcon" class="ai-victory-hand"></i>
-                <p>Spiel beendet</p>
-                <p id="summaryTxt"></p>
-                <button onclick="newGame()">Noch eine Runde!</button>
+              <i id="summaryIcon" class="ai-victory-hand"></i>
+              <p>Spiel beendet</p>
+              <p id="summaryTxt"></p>
+              <div id="detailedSummary">
+                <p>Deine Punkte (Du + Kari): 0</p>
+                <p>Punkte Gegner (Sepp + Heidi): 0</p>
+              </div>
+              <button onclick="newGame()">Noch eine Runde!</button>
+              <button>Spiel beenden</button>
             </div>
             <div id="controlButtons">
               <button onclick="closeGame()"><i class="ai-home-alt1"></i></button>

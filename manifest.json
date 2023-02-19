@@ -6,7 +6,7 @@
     "orientation": "any",
     "theme_color": "#79c857",
     "background_color": "#79c857",
-    "start_url": "https://jass.von-ah.me",
+    "start_url": "https://jass.von-ah.me?source=pwa",
     "display": "standalone",
     "icons": [
       {

@@ -558,6 +558,10 @@ body{
     transition: var(--transition);
 }
 
+#detailedSummary{
+    display: none;
+}
+
 @keyframes wiggleIcon{
     0%{
         transform: rotate(30deg);
